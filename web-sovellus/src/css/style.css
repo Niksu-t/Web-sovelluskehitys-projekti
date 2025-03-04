@@ -1,0 +1,71 @@
+
+body {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: white;
+}
+
+.SearchBar {
+  background-color: cadetblue;
+  display: flex;
+
+  flex-direction: row;
+}
+.headings {
+  list-style: none;
+}
+#pageTitle {
+  color: wheat;
+}
+
+a {
+  
+  text-decoration: none;
+}
+
+@media screen and (min-width : 600px) {
+  
+  .SearchBar {
+    margin-top: 0.5%;
+    border-radius: 10px;
+  }
+  body{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  #pageTitle {
+    padding: 1%;
+  }
+  
+  .headings {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10%;
+    width: 80%;
+  }
+  .heading {  
+    margin: 0;
+    color:whitesmoke;
+  }
+
+  .headingLinks{
+    margin-right : 5%;
+  }
+  .heading h1 {
+    padding: 1%;
+  }
+  #position {
+    color:darkgreen;
+    text-decoration: underline;
+    text-decoration-thickness: 10%;
+    text-underline-offset: 25%;
+    text-underline-position: under;
+    text-decoration-color:darkgreen;
+  }
+  
+  footer {
+    display: none;
+  }
+  a:hover {
+    color: rgb(172, 172, 172);
+  }
+}
