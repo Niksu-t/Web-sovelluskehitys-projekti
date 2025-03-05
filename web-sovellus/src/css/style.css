@@ -7,8 +7,7 @@ body {
 .SearchBar {
   background-color: cadetblue;
   display: flex;
-
-  flex-direction: row;
+  
 }
 .headings {
   list-style: none;
@@ -25,6 +24,7 @@ a {
 @media screen and (min-width : 600px) {
   
   .SearchBar {
+    flex-direction: row;
     margin-top: 0.5%;
     border-radius: 10px;
   }
@@ -40,13 +40,21 @@ a {
     display: flex;
     flex-direction: row;
     margin-right: 10%;
-    width: 80%;
+    width: 70%;
   }
   .heading {  
     margin: 0;
     color:whitesmoke;
   }
-
+  #login {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    border-radius: 10px;
+    margin: auto;
+    width: 7.5%;
+    text-align: center;
+    height: 2.5%;
+  }
   .headingLinks{
     margin-right : 5%;
   }
@@ -61,11 +69,31 @@ a {
     text-underline-position: under;
     text-decoration-color:darkgreen;
   }
+  .pageContent{
+    font-size: larger;
+    background-color: white;
+    border-color: black;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  #jeff {
+    width: 25%;
+    height: 25%;
+    margin: 0 auto;
+  }
   
   footer {
-    display: none;
+    margin-top: 30%;
+    border-radius: 10px;
+    padding : 1%;
+    text-align: center;
+    background-color: rgb(68, 112, 114);
   }
   a:hover {
     color: rgb(172, 172, 172);
   }
+}
+button:hover {
+  background-color: rgb(172, 172, 172);
 }

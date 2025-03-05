@@ -1,0 +1,62 @@
+
+img {
+    display: none;
+}
+
+@media screen and (min-width : 600px) {
+#BMIlaskuriBox {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 2%;
+    margin-bottom: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .BMIcontent {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  #bmiText {
+    color: gray;
+  }
+  #bmiHeader {
+    font-weight: 800;
+  }
+  #inputs {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    margin-top: 2%;
+  }
+  button {
+    margin-top: 2%;
+    width: 25%;
+    padding: 0.5%;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(78, 78, 78);
+  }
+  input[type="number"] {
+    width: 15%;
+  }
+  button:hover {
+    background-color: rgb(56, 56, 56);
+  }
+  td {
+    border: 1px solid gray;
+    margin: auto;
+  }
+  .highlighted {
+    background-color: greenyellow;
+  }
+  .BmiTop{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  img {
+    display:flex;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+  }
+}
