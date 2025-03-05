@@ -4,19 +4,118 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="/src/css/entries.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
   <body>
-    <section class="SearchBar">
-      <h1 id="pageTitle">Jeff United</h1>
-      <ul class = "headings">
-        <li class = "headingLinks"><a class = "heading" href=".../index.html"><h1>Home</h1></a></li>
-        <li class = "headingLinks"><a class = "heading" href="BMI.html"><h1>BMI</h1></a></li>
-        <li class = "headingLinks"><a id = "position" class = "heading" href="Entries.html"><h1>Entries</h1></a></li>
-        <li class = "headingLinks"><a class = "heading" href="index.html"><h1>Contact</h1></a></li>
-      </ul>
+    <section class="entirePage">
+      <section class="SearchBar">
+        <h1 id="pageTitle">Jeff United</h1>
+        <ul class="headings">
+          <li class="headingLinks">
+            <a class="heading" href="/"><h1>Home</h1></a>
+          </li>
+          <li class="headingLinks">
+            <a class="heading" href="BMI.html"><h1>BMI</h1></a>
+          </li>
+          <li class="headingLinks">
+            <a id="position" class="heading" href="Entries.html"
+              ><h1>Entries</h1></a
+            >
+          </li>
+          <li class="headingLinks">
+            <a class="heading" href="Contact.html"><h1>Contact</h1></a>
+          </li>
+          <li class="headingLinks">
+            <a class="heading" href="Login.html"><h1>Login</h1></a>
+          </li>
+        </ul>
+      </section>
+      <section class="pageContent">
+        <h3>Haetaan nappia painamalla kaikki käyttäjät</h3>
+        <button class="get_users">Hae käyttäjät</button>
+        <div class="forms">
+          <div style="flex: 1">
+            <p>
+              Taulukosta voi valita käyttäjän, jonka merkintöjä voi tarkistella.
+              Vain admin voi katsoa muiden merkintöjä.
+            </p>
+
+            <table class="styled-table">
+              <thead>
+                <tr>
+                  <th>User Name</th>
+                  <th>Email</th>
+                  <th>Info</th>
+                  <th>Select</th>
+                  <th>Delete</th>
+                  <th>ID</th>
+                </tr>
+              </thead>
+              <tbody class="tbody"></tbody>
+            </table>
+          </div>
+        </div>
+        <h2>Päiväkirjamerkinnät</h2>
+        <h3>Lisää merkintä</h3>
+        <form class="entryform">
+          <input
+            id="Date"
+            type="date"
+            name="date"
+            placeholder="date"
+            value="2025-03-05"
+          />
+          <input
+            id="mood"
+            type="text"
+            name="mood"
+            placeholder="mood"
+            value="happy"
+          />
+          <input
+            id="weigth"
+            type="number"
+            name="weight"
+            placeholder="kg"
+            value="50"
+          />
+          <input
+            id="sleephours"
+            type="number"
+            name="sleep"
+            placeholder="hours"
+            value="10"
+          />
+          <input
+            id="notes"
+            type="text"
+            name="notes"
+            placeholder="notes"
+            value=""
+          />
+          <input
+            name="submit"
+            type="submit"
+            value="postEntry"
+            class="entryform"
+          />
+        </form>
+        <h2>Hae päiväkirjamerkinnät</h2>
+        <p>Päiväkirjamerkintöjen hakeminen vaatii kirjautumisen.</p>
+        <button class="get_entries">Hae kaikki omat päiväkirjamerkinnät</button>
+        <button class="get_entries">
+          Hae kaikki valitun henkilön päiväkirjamerkinnät
+        </button>
+        <section class="card-area"></section>
+        <dialog class="info_dialog">
+          <p></p>
+          <button autofocus>Close</button>
+        </dialog>
+      </section>
     </section>
+    <script type="module" src="/src/js/main.js"></script>
     <footer>Copyright, Niko Tiesmäki</footer>
-    </body>
+  </body>
 </html>

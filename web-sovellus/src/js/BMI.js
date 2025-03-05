@@ -1,13 +1,11 @@
-
-/// BMI:n tulostusarvot varmiiksi niiden kutsumista varten
+/// BMI output values for calling them later
 const bmi_descript = {
-  underweight: "Olet alipainoinen",
-  normal: "Olet normaalin painoinen",
-  overweight: "Olet ylipainoinen",
+  underweight: "You are underweight",
+  normal: "You are of normal weight",
+  overweight: "You are overweight",
 };
 
-
-/// Laskee BMI:n standardin kaavan mukaisesti
+/// Calculates BMI according to the standard formula
 function calcBMI() {
   const resultNum = document.getElementById("resultNum");
   const results = document.getElementById("results");
@@ -18,26 +16,25 @@ function calcBMI() {
   const tabNorm = document.getElementById("normalWeight");
   const tabOver = document.getElementById("overWeight");
 
-  /// Varsinainen kaava
+  /// The actual formula
   const bmi = weight.value / (height.value / 100) ** 2;
 
-  /// Näyttää tuloksen kahden desimaalin tarkkuudella
-  resultNum.innerHTML = "Mittaustuloksesi: " + bmi.toFixed(2);
+  /// Displays the result with two decimal precision
+  resultNum.innerHTML = "Your measurement result: " + bmi.toFixed(2);
 
-
-  /// Tarkistaa saadun arvon laskuista ja asettaa taulukkoon oikean värin.
+  /// Checks the obtained value from the calculations and sets the correct color in the table.
   if (bmi < 19) {
     tabUnder.classList.add("highlighted");
-    results.innerHTML = "Analyysi: " + bmi_descript.underweight;
+    results.innerHTML = "Analysis: " + bmi_descript.underweight;
   } else if (bmi < 25) {
     tabNorm.classList.add("highlighted");
-    results.innerHTML = "Analyysi: " + bmi_descript.normal;
+    results.innerHTML = "Analysis: " + bmi_descript.normal;
   } else {
     tabOver.classList.add("highlighted");
-    results.innerHTML = "Analyysi: " + bmi_descript.overweight;
+    results.innerHTML = "Analysis: " + bmi_descript.overweight;
   }
 }
 
-/// Lisää tapahtumankuuntelijan painikkeelle
+/// Adds an event listener to the button
 const button = document.getElementById("bmiButton");
 button.addEventListener("click", calcBMI);

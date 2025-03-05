@@ -1,6 +1,5 @@
 import jwt from 'jsonwebtoken';
 import 'dotenv/config';
-import { selectEntriesByIds } from '../models/entry-model.js';
 
 const authenticateToken = (req, res, next) => {
   console.log('authenticateToken', req.headers);
@@ -18,24 +17,31 @@ const authenticateToken = (req, res, next) => {
   }
 };
 
+// Authorization check for entries
 const checkAuthEntries = async (req, res, next) => {
-    const result =  await selectEntriesByIds(req.user.user_id, req.params.id);
-    if(result == false){
-      res.sendStatus(401);
-    }
-    else {
-       next();
-    };
+  // Seacrh the database for the entry with the given id and gets user level from database
+  const userId = req.user.user_id
+  const admin_result = req.user.user_level;
+  // Checks if the user is the one that created the entry or is an admin
+  if (userId != req.user.user_id && admin_result !== "admin") {
+    res.status(401).json({message: 'Unauthorized'});
+  } else {
+    next();
+  }
 };
+
+// Authorization check for users
 const checkAuthUsers = async (req, res, next) => {
+  // Setting variables for ease of use
   const userId = req.user.user_id;
   const targetId = req.params.id;
-  if(userId != targetId){
-    res.sendStatus(401);
+  const user_level = req.user.user_level;
+  // Checks if the user is the same that they are trying to modify or is an admin
+  if (userId != targetId && user_level !== "admin") {
+    res.status(401).json({message: 'Unauthorized'});
+  } else {
+    next();
   }
-  else {
-     next();
-  };
 };
 
 export {authenticateToken, checkAuthEntries, checkAuthUsers};

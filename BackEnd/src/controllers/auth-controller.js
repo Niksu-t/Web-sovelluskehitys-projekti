@@ -10,8 +10,8 @@ const login = async (req, res) => {
     return res.status(401).json({message: 'Username missing.'});
   }
   const user = await selectUserByUsername(username);
-  // jos käyttäjä löytyi tietokannasta verrataan kirjautumiseen syötettyä sanaa tietokannan
-  // salasanatiivisteeseen
+  // If the user is found the inputted password is compared
+  // To hashed password
   if (user) {
     const match = await bcrypt.compare(password, user.password);
     if (match) {

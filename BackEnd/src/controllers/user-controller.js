@@ -1,28 +1,28 @@
 import bcrypt from 'bcryptjs';
-import { validationResult } from 'express-validator';
 import {
   insertUser,
   selectAllUsers,
   selectUserById,
   editUser,
+  deleteUser
 } from '../models/user-model.js';
 
-
-// kaikkien käyttäjätietojen haku
+// Fetch all user data
 const getUsers = async (req, res) => {
-  // in real world application, password properties should never be sent to client
+  // sends data back to client without password
   const users = await selectAllUsers();
+  console.log(users);
   res.json(users);
 };
 
-// Userin haku id:n perusteella
+// Fetch user by id
 const getUserById = async (req, res) => {
   console.log('getUserById', req.params.id);
 
   try {
     const user = await selectUserById(req.params.id);
     console.log('User found:', user);
-    // jos user löytyi, eli arvo ei ole undefined, lähetetään se vastauksena
+    // if user is found, i.e., value is not undefined, send it as a response
     if (user) {
       res.json(user);
     } else {
@@ -33,32 +33,18 @@ const getUserById = async (req, res) => {
   }
 };
 
-// käyttäjän lisäys (rekisteröinti)
-// lisätään parempi virheenkäsittely myöhemmin
-const addUser = async (req, res, next) => {
+// Add user (registration)
+// better error handling will be added later
+const addUser = async (req, res) => {
   console.log('addUser request body', req.body);
-
-
-  const errors = validationResult(req);
-  console.log(errors.array());
-  if (!errors.isEmpty()){
-    // annetaan virhe virheen käsittelijälle
-    const error = new Error ('Invalid or missing fields');
-    error.status = 400;
-
-    // palautetaan json viesti missä nähdään virheet
-    return next(error);
-  } 
-
-
-  // esitellään 3 uutta muuttujaa, johon sijoitetaan req.body:n vastaavien propertyjen arvot
+  // introduce 3 new variables, which are assigned the values of the corresponding properties of req.body
   const {username, password, email} = req.body;
-  // tarkistetaan, että pyynnössä on kaikki tarvittavat tiedot
+  // check that the request contains all necessary information
   if (username && password && email) {
-    // luodaan selväkielisestä sanasta tiiviste, joka tallennetaan kantaan
+    // create a hash from the plaintext password, which is stored in the database
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
-    // luodaan uusi käyttäjä olio ja lisätään se tietokantaa käyttäen modelia
+    // Create new user object with hashed password
     const newUser = {
       username,
       password: hashedPassword,
@@ -79,4 +65,35 @@ const addUser = async (req, res, next) => {
   });
 };
 
-export {getUsers, getUserById, addUser};
+const updateUser = (req, res) => {
+  console.log('editUser request body', req.body);
+  const user_id = req.params.id;
+  const {username, email, password} = req.body;
+  if (username && email && password) {
+    console.log('User content valid');
+    const user = {
+      username,
+      email,
+      password,
+    };
+    editUser(user_id, user);
+    res.json({message: 'User updated.'});
+  }
+  else {
+    res.status(400).json({message: 'Invalid user data'});
+  }
+};
+
+// Deletes user based on id
+const userDelete = (req, res) => {
+  console.log('deleteUser', req.params.id);
+  const userId = req.params.id;
+  try {
+    deleteUser(userId);
+    res.json({message: 'User deleted.'});
+  } catch (error) {
+    res.status(500).json({message: error.message});
+  }
+};
+
+export {getUsers, getUserById, addUser, updateUser, userDelete};

@@ -1,4 +1,4 @@
-import { validationResult } from 'express-validator';
+
 import {
   deleteEntryByIds,
   insertEntry,
@@ -6,35 +6,19 @@ import {
   selectEntriesByUserId,
 } from '../models/entry-model.js';
 
-
-/// Lisää päiväkirjamerkinnän tietokantaan
-const postEntry = async (req, res, next) => {
-
-  /// Validaation tarkistaminen
-  const errors = validationResult(req);
-
-  ///Löytyykö virheitä
-  if (!errors.isEmpty()) {
-
-    console.log('postEntry errors', errors.array());
-    const error = new Error('Invalid or missing fields');
-    error.status = 400;
-
-
-    return error(next);
-  }
-
+// Adds entry to the databse
+const postEntry = async (req, res) => {
   const newEntry = req.body;
   console.log(req.body);
   newEntry.user_id = req.user.user_id;
   try {
+    // calls the model function to insert the entry to the database
     await insertEntry(newEntry);
   } catch (error) {
     console.error(error);
     res.status(500).json({message: 'Database error'});
-
-    res.status(201).json({message: 'Entry added.'});
   }
+  res.status(201).json({message: 'Entry added.'});
 };
 
 /**
@@ -42,41 +26,39 @@ const postEntry = async (req, res, next) => {
  * @param {*} req
  * @param {*} res
  */
-
-/// Hakee kaikki käyttäjän merkinnät
-const getEntries = async (req, res) => {
+const getOwnEntries = async (req, res) => {
   const entries = await selectEntriesByUserId(req.user.user_id);
   res.json(entries);
 };
+const getEntriesById = async (req, res) => {
+  const entries = await selectEntriesByUserId(req.params.id);
+  res.json(entries);
+};
 
-/// Päivittää päiväkirjamerkinnän tietokannassa
+// Updates entry by id
 const updateEntry = async (req, res) => {
   console.log('Edit entry', req.params.id);
   const entryId = req.params.id;
   const entry = req.body;
-  const userId = req.user.user_id;
   try {
-    editEntry(userId, entryId, entry);
+    // calls model function to edit the entry
+    editEntry(entryId, entry);
   } catch (error) {
     console.log(req.params.id);
     console.error(error);
     res.status(500).json({message: 'Database error'});
-  }
+  };
 };
 
-/// Poistaa päiväkirjamerkinnän tietokannasta
+// Deletes entry by id
 const deleteEntry = async (req, res) => {
   console.log('Delete entry', req.params.id);
   const entryId = req.params.id;
-  const userId = req.user.user_id;
-  /// Kokeilee poistaa merkinnän
   try {
-    await deleteEntryByIds(userId, entryId);
-  }
-  /// Jos ei onnistu, tulostaa virheen (Ei löytynyt tai ei oikeuksia) 
-  catch (error) {
+    await deleteEntryByIds(entryId);
+  } catch (error) {
     console.error(error);
     res.status(500).json({message: 'Database error'});
   }
 };
-export {postEntry, getEntries, updateEntry, deleteEntry};
+export {postEntry, getOwnEntries, updateEntry, deleteEntry, getEntriesById};

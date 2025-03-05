@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="/src/css/login.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <section class = "entirePage">
+    <section class="SearchBar">
+      <h1 id="pageTitle">Jeff United</h1>
+      <ul class="headings">
+        <li class="headingLinks">
+          <a class="heading" href="/"><h1>Home</h1></a>
+        </li>
+        <li class="headingLinks">
+          <a class="heading" href="BMI.html"><h1>BMI</h1></a>
+        </li>
+        <li class="headingLinks">
+          <a class="heading" href="Entries.html"><h1>Entries</h1></a>
+        </li>
+        <li class="headingLinks">
+          <a class="heading" href="Contact.html"><h1>Contact</h1></a>
+        </li>
+        <li class="headingLinks">
+          <a id="position" class="heading" href="Login.html"><h1>Login</h1></a>
+        </li>
+      </ul>
+    </section>
+    <section class="pageContent">
+      <div>
+        <h1>
+          Login bellow or if you do not have a account
+          <button onclick="location.href='Register.html'" id="redirect_button">
+            Register
+          </button>
+        </h1>
+        <form class="loginForm">
+          <input
+            class="username"
+            type="text"
+            name="username"
+            placeholder="username"
+            value=""
+          />
+          <input
+            class="password"
+            type="password"
+            name="password"
+            placeholder="password"
+            value=""
+          />
+          <input name="submit" type="submit" value="Login" class="loginform" />
+        </form>
+      </div>
+    </section>
+  </section>
+    <script type="module" src="/src/js/auth.js"></script>
+    <footer>Copyright, Niko Tiesmäki</footer>
+  </body>
+ 
+</html>
