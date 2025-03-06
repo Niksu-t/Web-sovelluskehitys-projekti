@@ -4,7 +4,7 @@ import {
   selectAllUsers,
   selectUserById,
   editUser,
-  deleteUser
+  deleteUser,
 } from '../models/user-model.js';
 
 // Fetch all user data
@@ -51,24 +51,30 @@ const addUser = async (req, res) => {
       email,
     };
     try {
+      // tries to insert user using model function
       const result = await insertUser(newUser);
+      // if succeeds sends response to client
       res.status(201);
       return res.json({message: 'User added. id: ' + result});
     } catch (error) {
+      // if fails logs error to console and sends response to client
       console.error(error.message);
       return res.status(400).json({message: 'DB error: ' + error.message});
     }
   }
+  // if fields empty
   res.status(400);
   return res.json({
     message: 'Request should have username, password and email properties.',
   });
 };
 
+// updates user
 const updateUser = (req, res) => {
   console.log('editUser request body', req.body);
   const user_id = req.params.id;
   const {username, email, password} = req.body;
+  // checks if all required params are valid
   if (username && email && password) {
     console.log('User content valid');
     const user = {
@@ -76,10 +82,11 @@ const updateUser = (req, res) => {
       email,
       password,
     };
+    // calls model function if succeeds sends response to client
     editUser(user_id, user);
     res.json({message: 'User updated.'});
-  }
-  else {
+  } else {
+    // sends response to cliend if fails
     res.status(400).json({message: 'Invalid user data'});
   }
 };
@@ -89,9 +96,11 @@ const userDelete = (req, res) => {
   console.log('deleteUser', req.params.id);
   const userId = req.params.id;
   try {
+    // calls model function if succeeds sends response to client
     deleteUser(userId);
     res.json({message: 'User deleted.'});
   } catch (error) {
+    // sends response to client in case of failure
     res.status(500).json({message: error.message});
   }
 };

@@ -1,4 +1,4 @@
-import { getEntries, getEntriesById, addEntry} from "./entries.js";
+import { getEntries, getEntriesById, addEntry, updateEntry} from "./entries.js";
 import { getUsers } from "./users.js";
 // adds event listeners to the buttons
 
@@ -11,3 +11,6 @@ button2[1].addEventListener("click", getEntriesById);
 
 const entryForm = document.querySelector(".entryform");
 entryForm.addEventListener("submit", addEntry);
+
+const updateForm = document.querySelector(".updateform");
+updateForm.addEventListener("submit", updateEntry)

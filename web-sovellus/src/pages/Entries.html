@@ -25,9 +25,6 @@
             >
           </li>
           <li class="headingLinks">
-            <a class="heading" href="Contact.html"><h1>Contact</h1></a>
-          </li>
-          <li class="headingLinks">
             <a class="heading" href="Login.html"><h1>Login</h1></a>
           </li>
         </ul>
@@ -35,8 +32,7 @@
       <section class="pageContent">
         <h3>Haetaan nappia painamalla kaikki käyttäjät</h3>
         <button class="get_users">Hae käyttäjät</button>
-        <div class="forms">
-          <div style="flex: 1">
+          <div>
             <p>
               Taulukosta voi valita käyttäjän, jonka merkintöjä voi tarkistella.
               Vain admin voi katsoa muiden merkintöjä.
@@ -56,8 +52,9 @@
               <tbody class="tbody"></tbody>
             </table>
           </div>
-        </div>
         <h2>Päiväkirjamerkinnät</h2>
+        <div class = "forms">
+          <div class = "containerForm">
         <h3>Lisää merkintä</h3>
         <form class="entryform">
           <input
@@ -102,6 +99,59 @@
             class="entryform"
           />
         </form>
+      </div>
+      <div class = "containerForm">
+        <h3>Päivitä merkintä merkintä</h3>
+        <form class="updateform">
+          <input id = "entryId"
+          type = "number"
+          name = "entryId"
+          placeholder="Entry_Id"
+          value="">
+          <input
+            id="Updatedate"
+            type="date"
+            name="date"
+            placeholder="date"
+            value="2025-03-05"
+          />
+          <input
+            id="Updatemood"
+            type="text"
+            name="mood"
+            placeholder="mood"
+            value="happy"
+          />
+          <input
+            id="Updateweigth"
+            type="number"
+            name="weight"
+            placeholder="kg"
+            value="50"
+          />
+          <input
+            id="Updatesleephours"
+            type="number"
+            name="sleep"
+            placeholder="hours"
+            value="10"
+          />
+          <input
+            id="Updatenotes"
+            type="text"
+            name="notes"
+            placeholder="notes"
+            value=""
+          />
+          <input
+            name="submit"
+            type="submit"
+            value="postEntry"
+            class="entryform"
+          />
+        </form>
+      </div>
+      </div>
         <h2>Hae päiväkirjamerkinnät</h2>
         <p>Päiväkirjamerkintöjen hakeminen vaatii kirjautumisen.</p>
         <button class="get_entries">Hae kaikki omat päiväkirjamerkinnät</button>

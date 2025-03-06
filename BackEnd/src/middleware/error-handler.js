@@ -1,5 +1,6 @@
 import {validationResult} from 'express-validator';
 
+// Function in case of invalid request to a handler that does not exist
 const notFoundHandler = (req, res, next) => {
   const error = new Error(`Not found - ${req.originalUrl}`);
 
@@ -7,9 +8,11 @@ const notFoundHandler = (req, res, next) => {
   next(error);
 };
 
+// Validation error handler
 const validationErrorHandler = (req, res, next) => {
+  // Assigns errors from validation result to a variable
   const errors = validationResult(req, {strictParams: ['body']});
-
+  // checks if there are no errors
   if (!errors.isEmpty()) {
     const error = new Error('Bad request', 400);
     error.status = 400;
@@ -20,8 +23,9 @@ const validationErrorHandler = (req, res, next) => {
   }
   next();
 };
-
+// Error handler
 const errorHandler = (err, req, res, next) => {
+  // In case of error sends response to client
   res.status(err.status || 500);
   res.json({
     message: err.message,

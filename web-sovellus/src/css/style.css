@@ -28,6 +28,10 @@ footer {
   color: wheat;
   margin: auto;
 }
+#jeff {
+  width: 50%;
+  height: 50%;
+}
 .heading { 
   margin: auto;
   color:whitesmoke;
@@ -35,7 +39,8 @@ footer {
   flex-direction: row;
 }
 .headingLinks{
-  margin: auto;
+  margin-right: 20px;
+
 }
 a {
   
@@ -60,6 +65,7 @@ a {
   .entirePage{
     margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 20%;
   }
   #pageTitle {
     padding: 1%;
@@ -71,9 +77,8 @@ a {
     flex-direction: row;
     width: 70%;
   }
-  
-  .heading h1 {
-    padding: 1%;
+  .heading {
+    font-size: large;
   }
  
   .pageContent{

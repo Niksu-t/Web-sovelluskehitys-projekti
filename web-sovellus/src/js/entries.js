@@ -89,12 +89,14 @@ const getEntriesById = async () => {
 const addEntry = async (event) => {
   event.preventDefault();
   try {
+    // Get variables from form
     const date = document.querySelector("#Date").value.trim();
     const mood = document.querySelector("#mood").value;
     const weight = document.querySelector("#weigth").value.trim();
     const sleep_hours = document.querySelector("#sleephours").value.trim();
     const notes = document.querySelector("#notes").value;
-    console.log(date, mood, weight, sleep_hours, notes);
+    //console.log(date, mood, weight, sleep_hours, notes);
+    // Send variables to server
     const token = localStorage.getItem("token");
     const url = "http://localhost:3000/api/entries";
     const options = {
@@ -111,6 +113,7 @@ const addEntry = async (event) => {
         notes: notes,
       }),
     };
+    // wait for response
     const response = await fetchData(url, options);
     console.log(response);
   } catch (error) {
@@ -118,4 +121,40 @@ const addEntry = async (event) => {
   }
 };
 
-export { getEntries, getEntriesById, addEntry };
+// Update selected entry
+const updateEntry = async (event) => {
+  event.preventDefault();
+  try {
+    const entryId = document.querySelector("#entryId").value;
+    const date = document.querySelector("#Updatedate").value.trim();
+    const mood = document.querySelector("#Updatemood").value.trim();
+    const weight = document.querySelector("#Updateweigth").value.trim();
+    const sleep_hours = document.querySelector("#Updatesleephours").value.trim();
+    const notes = document.querySelector("#Updatenotes").value.trim();
+
+    // Sends data forward
+    const token = localStorage.getItem("token");
+    const url = `http://localhost:3000/api/entries/${entryId}`;
+    const options = {
+      method: "PUT",
+      headers: {
+        "Content-type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        entry_date: date,
+        mood: mood,
+        weight: weight,
+        sleep_hours: sleep_hours,
+        notes: notes,
+      }),
+    };
+    // wait for response
+    const response = await fetchData(url, options);
+    console.log(response);
+  } catch (error) {
+    console.log("Error", error);
+  }
+};
+
+export { getEntries, getEntriesById, addEntry, updateEntry };

@@ -15,9 +15,11 @@ const postEntry = async (req, res) => {
     // calls the model function to insert the entry to the database
     await insertEntry(newEntry);
   } catch (error) {
+    // catches error and logs it to console for easier troubleshootting
     console.error(error);
     res.status(500).json({message: 'Database error'});
   }
+  // sends response to the client
   res.status(201).json({message: 'Entry added.'});
 };
 
@@ -30,6 +32,7 @@ const getOwnEntries = async (req, res) => {
   const entries = await selectEntriesByUserId(req.user.user_id);
   res.json(entries);
 };
+// Gets entries for selected user
 const getEntriesById = async (req, res) => {
   const entries = await selectEntriesByUserId(req.params.id);
   res.json(entries);
@@ -44,10 +47,12 @@ const updateEntry = async (req, res) => {
     // calls model function to edit the entry
     editEntry(entryId, entry);
   } catch (error) {
-    console.log(req.params.id);
+    // catches error and logs it to console for easier troubleshootting
     console.error(error);
     res.status(500).json({message: 'Database error'});
   };
+ 
+  res.status(200).json({message: "Entry updated"});
 };
 
 // Deletes entry by id
@@ -55,10 +60,14 @@ const deleteEntry = async (req, res) => {
   console.log('Delete entry', req.params.id);
   const entryId = req.params.id;
   try {
+    // Calls model function to delete the entry
     await deleteEntryByIds(entryId);
   } catch (error) {
+    // // catches error and logs it to console for easier troubleshootting
     console.error(error);
     res.status(500).json({message: 'Database error'});
   }
+   // sends response to client
+   res.status(204).json({message:"Entry deleted"});
 };
 export {postEntry, getOwnEntries, updateEntry, deleteEntry, getEntriesById};

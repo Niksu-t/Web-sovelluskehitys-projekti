@@ -1,14 +1,17 @@
 import jwt from 'jsonwebtoken';
 import 'dotenv/config';
 
+// Authenticates token
 const authenticateToken = (req, res, next) => {
   console.log('authenticateToken', req.headers);
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
   console.log('token', token);
+  // checks if token is valid if failes sends response to client
   if (token == undefined) {
     return res.sendStatus(401);
   }
+  // tries to verify token. In case of failure sends response to server
   try {
     req.user = jwt.verify(token, process.env.JWT_SECRET);
     next();

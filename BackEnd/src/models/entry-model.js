@@ -41,6 +41,7 @@ const selectEntriesByUserId = async (userId) => {
 // Deletes entry by id
 const deleteEntryByIds = async (entryId) => {
   try {
+    // tries to delete entry from database
     const [rows] = await promisePool.query(
       'DELETE FROM DiaryEntries WHERE user_id=? AND entry_id=?',
       [entryId],
@@ -59,7 +60,7 @@ const editEntry = async ( entryId, entry) => {
   try {
     // Updates entry by searching for the entry by id
     const [rows] = await promisePool.query(
-      'UPDATE DiaryEntries SET entry_date=?, mood=?, weight=?, sleep_hours=?, notes=? WHERE AND entry_id=?',
+      'UPDATE DiaryEntries SET entry_date=?, mood=?, weight=?, sleep_hours=?, notes=? WHERE entry_id=?',
       [
         entry.entry_date,
         entry.mood,
