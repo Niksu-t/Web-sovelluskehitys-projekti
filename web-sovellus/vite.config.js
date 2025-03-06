@@ -12,6 +12,10 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 bmi: resolve(__dirname, 'src/pages/BMI.html'),
+                entries: resolve(__dirname, 'src/pages/Entries.html'),
+                login: resolve(__dirname, 'src/pages/Login.html'),
+                register: resolve(__dirname, 'src/pages/Register.html'),
+                profile: resolve(__dirname, 'src/pages/Profile.html'),
             },
         },
     },

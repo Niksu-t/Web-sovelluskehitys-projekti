@@ -21,8 +21,10 @@
           </li>
           <li class="headingLinks">
             <a id="position" class="heading" href="Entries.html"
-              ><h1>Entries</h1></a
-            >
+              ><h1>Entries</h1></a>
+          </li>
+          <li class="headingLinks">
+            <a class="heading" href="/src/pages/Profile.html"><h1>Profile</h1></a>
           </li>
           <li class="headingLinks">
             <a class="heading" href="Login.html"><h1>Login</h1></a>
@@ -32,126 +34,128 @@
       <section class="pageContent">
         <h3>Haetaan nappia painamalla kaikki käyttäjät</h3>
         <button class="get_users">Hae käyttäjät</button>
-          <div>
-            <p>
-              Taulukosta voi valita käyttäjän, jonka merkintöjä voi tarkistella.
-              Vain admin voi katsoa muiden merkintöjä.
-            </p>
+        <div>
+          <p>
+            Taulukosta voi valita käyttäjän, jonka merkintöjä voi tarkistella.
+            Vain admin voi katsoa muiden merkintöjä.
+          </p>
 
-            <table class="styled-table">
-              <thead>
-                <tr>
-                  <th>User Name</th>
-                  <th>Email</th>
-                  <th>Info</th>
-                  <th>Select</th>
-                  <th>Delete</th>
-                  <th>ID</th>
-                </tr>
-              </thead>
-              <tbody class="tbody"></tbody>
-            </table>
-          </div>
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>User Name</th>
+                <th>Email</th>
+                <th>Info</th>
+                <th>Select</th>
+                <th>Delete</th>
+                <th>ID</th>
+              </tr>
+            </thead>
+            <tbody class="tbody"></tbody>
+          </table>
+        </div>
         <h2>Päiväkirjamerkinnät</h2>
-        <div class = "forms">
-          <div class = "containerForm">
-        <h3>Lisää merkintä</h3>
-        <form class="entryform">
-          <input
-            id="Date"
-            type="date"
-            name="date"
-            placeholder="date"
-            value="2025-03-05"
-          />
-          <input
-            id="mood"
-            type="text"
-            name="mood"
-            placeholder="mood"
-            value="happy"
-          />
-          <input
-            id="weigth"
-            type="number"
-            name="weight"
-            placeholder="kg"
-            value="50"
-          />
-          <input
-            id="sleephours"
-            type="number"
-            name="sleep"
-            placeholder="hours"
-            value="10"
-          />
-          <input
-            id="notes"
-            type="text"
-            name="notes"
-            placeholder="notes"
-            value=""
-          />
-          <input
-            name="submit"
-            type="submit"
-            value="postEntry"
-            class="entryform"
-          />
-        </form>
-      </div>
-      <div class = "containerForm">
-        <h3>Päivitä merkintä merkintä</h3>
-        <form class="updateform">
-          <input id = "entryId"
-          type = "number"
-          name = "entryId"
-          placeholder="Entry_Id"
-          value="">
-          <input
-            id="Updatedate"
-            type="date"
-            name="date"
-            placeholder="date"
-            value="2025-03-05"
-          />
-          <input
-            id="Updatemood"
-            type="text"
-            name="mood"
-            placeholder="mood"
-            value="happy"
-          />
-          <input
-            id="Updateweigth"
-            type="number"
-            name="weight"
-            placeholder="kg"
-            value="50"
-          />
-          <input
-            id="Updatesleephours"
-            type="number"
-            name="sleep"
-            placeholder="hours"
-            value="10"
-          />
-          <input
-            id="Updatenotes"
-            type="text"
-            name="notes"
-            placeholder="notes"
-            value=""
-          />
-          <input
-            name="submit"
-            type="submit"
-            value="postEntry"
-            class="entryform"
-          />
-        </form>
-      </div>
-      </div>
+        <div class="forms">
+          <div class="containerForm">
+            <h3>Lisää merkintä</h3>
+            <form class="entryform">
+              <input
+                id="Date"
+                type="date"
+                name="date"
+                placeholder="date"
+                value="2025-03-05"
+              />
+              <input
+                id="mood"
+                type="text"
+                name="mood"
+                placeholder="mood"
+                value="happy"
+              />
+              <input
+                id="weigth"
+                type="number"
+                name="weight"
+                placeholder="kg"
+                value="50"
+              />
+              <input
+                id="sleephours"
+                type="number"
+                name="sleep"
+                placeholder="hours"
+                value="10"
+              />
+              <input
+                id="notes"
+                type="text"
+                name="notes"
+                placeholder="notes"
+                value=""
+              />
+              <input
+                name="submit"
+                type="submit"
+                value="postEntry"
+                class="entryform"
+              />
+            </form>
+          </div>
+          <div class="containerForm">
+            <h3>Päivitä merkintä merkintä</h3>
+            <form class="updateform">
+              <input
+                id="entryId"
+                type="number"
+                name="entryId"
+                placeholder="Entry_Id"
+                value=""
+              />
+              <input
+                id="Updatedate"
+                type="date"
+                name="date"
+                placeholder="date"
+                value="2025-03-05"
+              />
+              <input
+                id="Updatemood"
+                type="text"
+                name="mood"
+                placeholder="mood"
+                value="happy"
+              />
+              <input
+                id="Updateweigth"
+                type="number"
+                name="weight"
+                placeholder="kg"
+                value="50"
+              />
+              <input
+                id="Updatesleephours"
+                type="number"
+                name="sleep"
+                placeholder="hours"
+                value="10"
+              />
+              <input
+                id="Updatenotes"
+                type="text"
+                name="notes"
+                placeholder="notes"
+                value=""
+              />
+              <input
+                name="submit"
+                type="submit"
+                value="postEntry"
+                class="entryform"
+              />
+            </form>
+          </div>
+        </div>
         <h2>Hae päiväkirjamerkinnät</h2>
         <p>Päiväkirjamerkintöjen hakeminen vaatii kirjautumisen.</p>
         <button class="get_entries">Hae kaikki omat päiväkirjamerkinnät</button>
