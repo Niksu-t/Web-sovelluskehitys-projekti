@@ -1,6 +1,16 @@
 import { fetchData } from "./fetch.js";
 const container = document.getElementsByClassName("card-area");
 
+const addEventListeners = () => {
+  // Adds event listener to the button that deletes user
+  document.querySelectorAll(".entrydel").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const entryId = event.target.dataset.id;
+      deleteEntry(entryId);
+    });
+  });
+};
+
 // Get all entries from the database
 const getEntries = async () => {
   try {
@@ -21,8 +31,11 @@ const getEntries = async () => {
     }
     // create a card for each entry
     entries.forEach((entry) => {
+      // Creates card
       const card = document.createElement("div");
+      // Assings class to card for styling
       card.className = "card";
+      // adds data to card
       card.innerHTML = `
           <div class="card-img">
             <img src="/src/imgs/jeff.png" alt="" />
@@ -34,6 +47,7 @@ const getEntries = async () => {
           <div>Weight: <span>${entry.weight}</span></div>
           <div>Sleep hours: <span>${entry.sleep_hours}</span></div>
           <div>Notes: <span>${entry.notes}</span></div>
+          <div><button class="entrydel" data-id = "${entry.entry_id}">Delete</button></div>
           </div>`;
       // append the card to the container
       container[0].appendChild(card);
@@ -41,6 +55,8 @@ const getEntries = async () => {
   } catch (error) {
     console.log("Error: ", error);
   }
+  // add functionality for deleting entry
+  addEventListeners();
 };
 
 // Get all entries from the database by user id
@@ -63,8 +79,11 @@ const getEntriesById = async () => {
     }
     // creates a card for each entry
     entries.forEach((entry) => {
+      // Creates card
       const card = document.createElement("div");
+      // Assings class to card for styling
       card.className = "card";
+      // adds data to card
       card.innerHTML = `
             <div class="card-img">
               <img src="/src/imgs/jeff.png" alt="" />
@@ -76,6 +95,7 @@ const getEntriesById = async () => {
             <div>Weight: <span>${entry.weight}</span></div>
             <div>Sleep hours: <span>${entry.sleep_hours}</span></div>
             <div>Notes: <span>${entry.notes}</span></div>
+            <div><button class="entrydel" data-id = "${entry.entry_id}">Delete</button></div>
             </div>`;
       // Append the card to the container
       container[0].appendChild(card);
@@ -83,6 +103,8 @@ const getEntriesById = async () => {
   } catch (error) {
     console.log("Error: ", error);
   }
+  // add functionality for deleting entry
+  addEventListeners();
 };
 
 // Add entry to database for logged in user
@@ -129,7 +151,9 @@ const updateEntry = async (event) => {
     const date = document.querySelector("#Updatedate").value.trim();
     const mood = document.querySelector("#Updatemood").value.trim();
     const weight = document.querySelector("#Updateweigth").value.trim();
-    const sleep_hours = document.querySelector("#Updatesleephours").value.trim();
+    const sleep_hours = document
+      .querySelector("#Updatesleephours")
+      .value.trim();
     const notes = document.querySelector("#Updatenotes").value.trim();
 
     // Sends data forward
@@ -150,6 +174,25 @@ const updateEntry = async (event) => {
       }),
     };
     // wait for response
+    const response = await fetchData(url, options);
+    alert(response);
+  } catch (error) {
+    console.log("Error", error);
+    alert(error);
+  }
+};
+
+// entry deletion
+const deleteEntry = async (entryId) => {
+  try {
+    const token = localStorage.getItem("token");
+    const url = `http://localhost:3000/api/entries/${entryId}`;
+    const options = {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
     const response = await fetchData(url, options);
     console.log(response);
   } catch (error) {
