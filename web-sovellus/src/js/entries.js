@@ -1,5 +1,18 @@
 import { fetchData } from "./fetch.js";
+
 const container = document.getElementsByClassName("card-area");
+const dialog = document.querySelector(".info_dialog");
+const closeButton = document.querySelector(".info_dialog button");
+
+const showDia = (message) => {
+  dialog.querySelector("p").innerHTML = `
+          <div><span>${message}</span></div>`;
+  dialog.showModal();
+};
+
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
 
 const addEventListeners = () => {
   // Adds event listener to the button that deletes user
@@ -137,7 +150,7 @@ const addEntry = async (event) => {
     };
     // wait for response
     const response = await fetchData(url, options);
-    console.log(response);
+    showDia(response.message);
   } catch (error) {
     console.log("Error: ", error);
   }
@@ -175,7 +188,7 @@ const updateEntry = async (event) => {
     };
     // wait for response
     const response = await fetchData(url, options);
-    alert(response);
+    showDia(response.message);
   } catch (error) {
     console.log("Error", error);
     alert(error);
@@ -194,7 +207,7 @@ const deleteEntry = async (entryId) => {
       },
     };
     const response = await fetchData(url, options);
-    console.log(response);
+    showDia("Entry deleted");
   } catch (error) {
     console.log("Error", error);
   }

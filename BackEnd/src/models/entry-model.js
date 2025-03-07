@@ -72,7 +72,7 @@ const editEntry = async ( entryId, entry) => {
     );
     console.log(rows);
     // Returns the first item of the result array
-    return rows[0];
+    return rows.changedRows;
   } catch (error) {
     console.error(error);
     throw new Error('database error');

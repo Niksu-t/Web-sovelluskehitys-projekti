@@ -6,6 +6,12 @@ const closeButton = document.querySelector(".info_dialog button");
 const tables = document.getElementsByClassName("styled-table");
 const tableBody = tables[0].getElementsByTagName("tbody")[0];
 
+const showDia = (message) => {
+  dialog.querySelector("p").innerHTML = `
+          <div><span>${message}</span></div>`;
+  dialog.showModal();
+};
+
 closeButton.addEventListener("click", () => {
   dialog.close();
 });
@@ -94,7 +100,8 @@ const deleteUser = async (id) => {
       },
     };
     const response = await fetchData(url, options);
-    console.log(response);
+    showDia(response.message);
+    getUsers();
   } catch (error) {
     console.log("Error", error);
   }
@@ -105,7 +112,7 @@ const getUserDataById = async (id) => {
   try {
     const response = await fetch(`http://localhost:3000/api/users/${id}`);
     const data = await response.json();
-    console.log(data);
+    //console.log(data);
     return data;
   } catch (error) {
     consolel.log("Error", error);

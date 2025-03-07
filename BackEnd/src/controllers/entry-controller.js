@@ -45,14 +45,18 @@ const updateEntry = async (req, res) => {
   const entry = req.body;
   try {
     // calls model function to edit the entry
-    editEntry(entryId, entry);
+    const response = await editEntry(entryId, entry);
+    if (response != 0) {
+      res.status(200).json({message: "Entry updated"});
+    } else{
+      res.status(200).json({message: "No Entry updated"});
+    }
   } catch (error) {
     // catches error and logs it to console for easier troubleshootting
     console.error(error);
     res.status(500).json({message: 'Database error'});
   };
- 
-  res.status(200).json({message: "Entry updated"});
+  
 };
 
 // Deletes entry by id

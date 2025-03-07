@@ -13,19 +13,26 @@ closeButton.addEventListener("click", () => {
   dialog.close();
 });
 
-// Add user
-const addUser = async (event) => {
-  // stops the form from reloading page
+// Selects form of html
+const updateform = document.querySelector(".updateform");
+
+// updates user info
+const updateUser = async (event) => {
   event.preventDefault();
   try {
-    const url = "http://localhost:3000/api/users";
+    // variable assignment
+    const token = localStorage.getItem("token");
+    const userId = document.querySelector("#userId").value;
+    const url = `http://localhost:3000/api/users/${userId}`;
     const username = document.querySelector("#username").value.trim();
     const password = document.querySelector("#password").value.trim();
     const email = document.querySelector("#email").value.trim();
+    // Options for message
     const options = {
-      method: "POST",
+      method: "PUT",
       headers: {
         "Content-type": "application/json",
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
         username: username,
@@ -34,19 +41,13 @@ const addUser = async (event) => {
       }),
     };
     const response = await fetchData(url, options);
-    if (response.error) {
-      showDia(response.error);
-  }
-    else {
-      showDia(response.message);
-      console.log(response);
-      
-    }
+    showDia(response.message);
+    console.log(response);
   } catch (error) {
-    showDia({"Error":  error});
+    showDia(error);
     console.log("Error", error);
   }
 };
 
-const addForm = document.querySelector(".addform");
-addForm.addEventListener("submit", addUser);
+updateform.addEventListener("submit", updateUser);
+

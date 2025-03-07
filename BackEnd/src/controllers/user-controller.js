@@ -1,4 +1,4 @@
-import bcrypt from 'bcryptjs';
+import bcrypt, { hash } from 'bcryptjs';
 import {
   insertUser,
   selectAllUsers,
@@ -39,55 +39,57 @@ const addUser = async (req, res) => {
   console.log('addUser request body', req.body);
   // introduce 3 new variables, which are assigned the values of the corresponding properties of req.body
   const {username, password, email} = req.body;
-  // check that the request contains all necessary information
-  if (username && password && email) {
-    // create a hash from the plaintext password, which is stored in the database
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(password, salt);
-    // Create new user object with hashed password
-    const newUser = {
-      username,
-      password: hashedPassword,
-      email,
-    };
-    try {
-      // tries to insert user using model function
-      const result = await insertUser(newUser);
-      // if succeeds sends response to client
-      res.status(201);
-      return res.json({message: 'User added. id: ' + result});
-    } catch (error) {
-      // if fails logs error to console and sends response to client
-      console.error(error.message);
-      return res.status(400).json({message: 'DB error: ' + error.message});
-    }
+  let user_level = "regular";
+  if (req.body.user_level) {
+    user_level = req.body.user_level;
   }
-  // if fields empty
-  res.status(400);
-  return res.json({
-    message: 'Request should have username, password and email properties.',
-  });
+  // create a hash from the plaintext password, which is stored in the database
+  const salt = await bcrypt.genSalt(10);
+  const hashedPassword = await bcrypt.hash(password, salt);
+  // Create new user object with hashed password
+  const newUser = {
+    username,
+    password: hashedPassword,
+    email,
+    user_level
+  };
+  try {
+    // tries to insert user using model function
+    const result = await insertUser(newUser);
+    // if succeeds sends response to client
+    res.status(201);
+    return res.json({message: 'User added with id: ' + result});
+  } catch (error) {
+    // if fails logs error to console and sends response to client
+    console.error(error.message);
+    return res.status(400).json({message: 'DB error: ' + error.message});
+  }
 };
 
 // updates user
-const updateUser = (req, res) => {
+const updateUser = async (req, res) => {
   console.log('editUser request body', req.body);
   const user_id = req.params.id;
   const {username, email, password} = req.body;
+  const salt = await bcrypt.genSalt(10);
+  const hashedPassword = await bcrypt.hash(password, salt)
   // checks if all required params are valid
-  if (username && email && password) {
-    console.log('User content valid');
-    const user = {
-      username,
-      email,
-      password,
-    };
+  const user = {
+    username,
+    password : hashedPassword,
+    email, 
+  };
+  try {
     // calls model function if succeeds sends response to client
-    editUser(user_id, user);
-    res.json({message: 'User updated.'});
-  } else {
-    // sends response to cliend if fails
-    res.status(400).json({message: 'Invalid user data'});
+    const response = await editUser(user_id, user);
+    console.log(response);
+    if (response != 0) {
+      res.status(200).json({message: 'User updated'});
+    } else {
+      res.status(200).json({message: 'No user updated'});
+    }
+  } catch (error) {
+    res.json({message: error});
   }
 };
 

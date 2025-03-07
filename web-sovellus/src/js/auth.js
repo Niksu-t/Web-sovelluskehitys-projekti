@@ -3,6 +3,15 @@ import { fetchData } from "./fetch.js";
 const dialog = document.querySelector(".info_dialog");
 const closeButton = document.querySelector(".info_dialog button");
 
+const showDia = (message) => {
+  dialog.querySelector("p").innerHTML = `
+          <div><span>${message}</span></div>`;
+  dialog.showModal();
+};
+
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
 
 // Login user
 const loginUser = async (event) => {
@@ -38,11 +47,11 @@ const loginUser = async (event) => {
 
   // If there is an error, display it using a dialog box
   if (response.error) {
-    console.log("Error logging in: ", response.error);
+    showDia(response.error);
     return;
   }
   if (response.message) {
-    console.log("success");
+    showDia("Login successful");
   }
 
   localStorage.setItem("token", response.token);

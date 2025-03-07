@@ -42,15 +42,15 @@ const selectUserById = async (userId) => {
 const insertUser = async (user) => {
   try {
     const [result] = await promisePool.query(
-      'INSERT INTO Users (username, password, email) VALUES (?, ?, ?)',
-      [user.username, user.password, user.email],
+      'INSERT INTO Users (username, password, email, user_level) VALUES (?, ?, ?, ?)',
+      [user.username, user.password, user.email, user.user_level],
     );
     console.log('insertUser', result);
     // return only first item of the result array
     return result.insertId;
   } catch (error) {
-    console.error(error);
-    throw new Error('database error');
+    console.error(error.sqlMessage);
+    throw new Error(error.sqlMessage);
   }
 };
 
@@ -106,8 +106,8 @@ const editUser = async (userId, user) => {
       [user.username, user.password, user.email, userId],
     );
     console.log(rows);
-    // Palauttaa päivitetyt tiedot
-    return rows[0];
+    // Returns affected / changed rows.
+    return rows.changedRows;
   } catch (error) {
     console.error(error);
     throw new Error('database error');
@@ -127,7 +127,7 @@ const deleteUser = async (userId) => {
     console.error(error);
     throw new Error('database error');
   }
-}
+};
 
 export {
   selectAllUsers,

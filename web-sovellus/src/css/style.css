@@ -1,3 +1,11 @@
+dialog {
+  border-radius: 10px;
+}
+
+dialog::backdrop {
+  background-color: #646cff;
+  opacity: 40%;
+}
 
 body {
   font-family:Arial, Helvetica, sans-serif;
