@@ -2,7 +2,9 @@ import { fetchData } from "./fetch.js";
 
 const dialog = document.querySelector(".info_dialog");
 const closeButton = document.querySelector(".info_dialog button");
+const checkID = document.getElementsByClassName("authenticatedReq");
 
+// For simple diagolog messages
 const showDia = (message) => {
   dialog.querySelector("p").innerHTML = `
           <div><span>${message}</span></div>`;
@@ -15,6 +17,31 @@ closeButton.addEventListener("click", () => {
 
 // Selects form of html
 const updateform = document.querySelector(".updateform");
+
+// Gets users info
+const authenticatedReq = async () => {
+  const url = "http://localhost:3000/api/auth/me";
+  const token = localStorage.getItem("token");
+  const options = {
+    method: "GET",
+    headers: { Authorization: `Bearer ${token}` },
+  };
+  try {
+  const user = await fetchData(url, options);
+  if (!user.error) {
+    dialog.querySelector("p").innerHTML = `
+      <div>User ID: <span>${user.user_id}</span></div>
+      <div>User Name: <span>${user.username}</span></div>
+      <div>Email: <span>${user.email}</span></div>
+      <div>Role: <span>${user.user_level}</span></div>`;
+    dialog.showModal();
+  } else {
+    showDia("Something went wrong");
+  }
+}catch (error) {
+  console.log("Error ", error)
+}
+};
 
 // updates user info
 const updateUser = async (event) => {
@@ -50,4 +77,4 @@ const updateUser = async (event) => {
 };
 
 updateform.addEventListener("submit", updateUser);
-
+checkID[0].addEventListener("click", authenticatedReq);
