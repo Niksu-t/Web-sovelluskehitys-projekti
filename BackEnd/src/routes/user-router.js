@@ -19,6 +19,7 @@ userRouter.route('/')
     body('username', 'username must be 3-20 characters long and alphanumeric').trim().isLength({min: 3, max: 20}).isAlphanumeric(),
     body('password', 'minimum password lenght is 8 characters').trim().isLength({min: 8}),
     body('email', 'must be a valid email address').trim().isEmail(),
+    body('user_level', ).trim().optional(),
     validationErrorHandler,
     addUser);
 
