@@ -68,43 +68,44 @@ button {
   .styled-table {
     border-collapse: collapse;
     margin: auto;
-    font-size: 0.9em;
+    font-size: 1.2vw; 
     font-family: sans-serif;
-    min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  .styled-table thead tr {
+    width: 80%; 
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.15); 
+}
+
+.styled-table thead tr {
     background-color: cadetblue;
     color: #ffffff;
     text-align: center;
-  }
-  
-  .styled-table th,
-  .styled-table td {
-      padding: 12px 15px;
-  }
-  
-  .styled-table tbody tr {
-    border-bottom: 1px solid #dddddd;
-  }
-  
-  .styled-table tbody tr:nth-of-type(even) {
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 1.2vw 1.8vw; 
+}
+
+.styled-table tbody tr {
+    border-bottom: 0.1vw solid #dddddd; 
+}
+
+.styled-table tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
-  }
-  
-  .styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid cadetblue;
-  }
-  .styled-table tbody tr.active-row {
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 0.2vw solid cadetblue; 
+}
+
+.styled-table tbody tr.active-row {
     font-weight: bold;
     color: #009879;
-  }
-  
-  .styled-table tbody tr:hover {
+}
+
+.styled-table tbody tr:hover {
     background-color: #68535358;
     cursor: pointer;
-  }
+}
   input[type="submit"]{
     background-color: #009879;
     color: white;
