@@ -1,7 +1,9 @@
 import { getEntries, getEntriesById, addEntry, updateEntry} from "./entries.js";
 import { getUsers } from "./users.js";
-// adds event listeners to the buttons
 
+
+// adds event listeners to the buttons
+// Event listeners call functions for button presses
 const button1 = document.getElementsByClassName("get_users");
 button1[0].addEventListener("click", getUsers);
 
