@@ -13,7 +13,8 @@ Tässä readme tiedostossa käydään läpi kurssin yksilöprojekti. Ensimmäise
 
 ## Linkit Backendiin ja Frontendiin
 
-Molemmat pyörivät localhost palvelimella. Testauksessa käytetyt osoitteet http://localhost:5137/ & http://localhost:3000. API dokumentaatio löytyy suoraan API:n juuresta eli http://localhost:3000.
+Molemmat pyörivät localhost palvelimella. Testauksessa käytetyt osoitteet http://localhost:5137/ & http://localhost:3000. API dokumentaatio löytyy suoraan API:n juuresta eli http://localhost:3000.  
+API dokumentaatio vaatii komennon "npm run apidoc" suorittamista.
 
 ## Tietokannan kuvaus
 
@@ -82,6 +83,6 @@ Päiväkirjan poistaessa fetchData funktio vastaa errorilla (Mahdollisesti lähe
 
 **API dokumentaatiota luodessa käytetty:**
 
-Microsoft copilot käytetty apuna kommentoimisessa.  
+Microsoft copilot käytetty apuna apidoc kommentoimisessa. Muut kommenttit laadittu ilman  
 ApiDoc dokumentaatiota  
 Opettajan materiaalia dokumentaatiosta.
