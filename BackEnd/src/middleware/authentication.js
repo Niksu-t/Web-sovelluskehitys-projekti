@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { selectEntriesByIds } from '../models/entry-model.js';
+import {selectEntriesByIds} from '../models/entry-model.js';
 import 'dotenv/config';
 
 // Authenticates token
@@ -24,23 +24,28 @@ const authenticateToken = (req, res, next) => {
 // Authorization check for entries
 const checkAuthEntries = async (req, res, next) => {
   // Seacrh the database for entry and check if the user_id is the same as request makers.
-  const target = await selectEntriesByIds(req.params.id);
-  const target_user = target.user_id;
-  console.log("Target: ", target_user);
-  console.log("Request maker: ", req.user.user_id);
-  const admin_result = req.user.user_level;
-  // Checks if the user is the one that created the entry or is an admin
-  if (target_user != req.user.user_id && admin_result !== "admin") {
-    res.status(401).json({message: 'Unauthorized'});
-  } else {
-    next();
+  try {
+    const target = await selectEntriesByIds(req.params.id);
+    const target_user = target.user_id;
+    console.log('Target: ', target_user);
+    console.log('Request maker: ', req.user.user_id);
+    const admin_result = req.user.user_level;
+    // Checks if the user is the one that created the entry or is an admin
+    if (target_user != req.user.user_id && admin_result !== 'admin') {
+      res.status(401).json({message: 'Unauthorized'});
+    } else {
+      next();
+    }
+  } catch (error) {
+    console.log('Error', error);
+    res.status(500).json({message: error});
   }
 };
 /**
- * 
- * @param {object} req 
- * @param {object} res 
- * @param {function} next 
+ *
+ * @param {object} req
+ * @param {object} res
+ * @param {function} next
  */
 // Authorization check for users
 const checkAuthUsers = async (req, res, next) => {
@@ -49,7 +54,7 @@ const checkAuthUsers = async (req, res, next) => {
   const targetId = req.params.id;
   const user_level = req.user.user_level;
   // Checks if the user is the same that they are trying to modify or is an admin
-  if (userId != targetId && user_level !== "admin") {
+  if (userId != targetId && user_level !== 'admin') {
     res.status(401).json({message: 'Unauthorized'});
   } else {
     next();

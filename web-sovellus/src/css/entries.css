@@ -68,9 +68,9 @@ button {
   .styled-table {
     border-collapse: collapse;
     margin: auto;
-    font-size: 1.2vw; 
+    font-size: 2vw; 
     font-family: sans-serif;
-    width: 80%; 
+    width: 1vw; 
     box-shadow: 0 0 2vw rgba(0, 0, 0, 0.15); 
 }
 
@@ -168,5 +168,61 @@ input[type="submit"]:hover {
     font-size: 1.2em;
     line-height: 1.5;
   }
-  
+  .styled-table {
+    border-collapse: collapse;
+    margin: auto;
+    font-size: 1vw; 
+    font-family: sans-serif;
+    width: 80%; 
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.15); 
+}
+
+.styled-table thead tr {
+    background-color: cadetblue;
+    color: #ffffff;
+    text-align: center;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 0.5vw 0.8vw; 
+}
+
+.styled-table tbody tr {
+    border-bottom: 0.1vw solid #dddddd; 
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+}
+@media screen and (min-width: 1024px) {
+  .styled-table {
+    border-collapse: collapse;
+    margin: auto;
+    font-size: 0.8vw; 
+    font-family: sans-serif;
+    width: 80%; 
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.15); 
+}
+
+.styled-table thead tr {
+    background-color: cadetblue;
+    color: #ffffff;
+    text-align: center;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 0.5vw 0.5vw; 
+}
+
+.styled-table tbody tr {
+    border-bottom: 0.1vw solid #dddddd; 
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
 }
