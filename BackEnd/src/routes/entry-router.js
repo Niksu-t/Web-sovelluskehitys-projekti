@@ -44,14 +44,6 @@ const entryRouter = express.Router();
  * HTTP/1.1 201 Created
  * {
  * "message": "Entry added.",
- * "entry": {
- * "entry_id": 1,
- * "entry_date": "2025-02-25",
- * "mood": "happy",
- * "weight": 70,
- * "sleep_hours": 8,
- * "notes": "Had a great day!"
- * }
  * }
  *
  * @apiUse UnauthorizedError
@@ -174,14 +166,6 @@ entryRouter
    * HTTP/1.1 200 OK
    * {
    * "message": "Entry updated",
-   * "entry": {
-   * "entry_id": 1,
-   * "entry_date": "2025-02-25",
-   * "mood": "happy",
-   * "weight": 70,
-   * "sleep_hours": 8,
-   * "notes": "Had a great day!"
-   * }
    * }
    *
    * @apiUse UnauthorizedError

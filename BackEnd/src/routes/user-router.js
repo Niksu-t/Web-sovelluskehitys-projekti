@@ -153,10 +153,7 @@ userRouter
    * @apiSuccessExample Success-Response:
    * HTTP/1.1 200 OK
    * {
-   * "user_id": 1,
-   * "username": "johnd",
-   * "email": "johnd@example.com",
-   * "user_level": "admin"
+   * message: User updated
    * }
    *
    * @apiUse UnauthorizedError
