@@ -114,7 +114,7 @@ const getEntriesById = async () => {
       container[0].appendChild(card);
     });
   } catch (error) {
-    console.log("Error: ", error);
+    showDia("Something went wrong");
   }
   // add functionality for deleting entry
   addEventListeners();
@@ -207,7 +207,12 @@ const deleteEntry = async (entryId) => {
       },
     };
     const response = await fetchData(url, options);
-    showDia("Entry deleted");
+    if (response.error) {
+      showDia(response.error);
+    } else {
+      showDia("Entry deleted");
+    }
+   
   } catch (error) {
     console.log("Error", error);
   }

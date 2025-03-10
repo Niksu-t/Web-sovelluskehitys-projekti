@@ -100,7 +100,11 @@ const deleteUser = async (id) => {
       },
     };
     const response = await fetchData(url, options);
+    if (response.error){
+      showDia(response.error)
+    } else {
     showDia(response.message);
+    }
     getUsers();
   } catch (error) {
     console.log("Error", error);

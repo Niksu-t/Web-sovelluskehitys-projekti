@@ -44,7 +44,8 @@ content-type: application/json
 {
   "username" : "meloonitest",
   "password" : "melooni20",
-  "email": "meloonitest@melooni.fi"
+  "email": "meloonitest@melooni.fi",
+  "user_level": "admin"
 }
 
 ### modify an existing user by id

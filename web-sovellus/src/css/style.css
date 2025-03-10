@@ -12,6 +12,10 @@ body {
   background-color: white;
   margin: 0;
 }
+
+.entirePage{
+  margin-bottom: 20%;
+}
 .pageContent{
   text-align: center;
 }
