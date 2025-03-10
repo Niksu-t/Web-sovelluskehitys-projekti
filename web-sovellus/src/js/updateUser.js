@@ -68,7 +68,11 @@ const updateUser = async (event) => {
       }),
     };
     const response = await fetchData(url, options);
-    showDia(response.message);
+    if (response.error) {
+      showDia(response.error)
+    } else {
+      showDia(response.message);
+    }
     console.log(response);
   } catch (error) {
     showDia(error);
