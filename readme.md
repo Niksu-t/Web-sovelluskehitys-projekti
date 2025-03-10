@@ -75,13 +75,13 @@ erDiagram
 Päiväkirjan poistaessa fetchData funktio vastaa errorilla (Mahdollisesti lähettää delete pyynnön 2 kertaa?)
 ## Referenssit
 
-**Projektin tekemisessä käytetty ongelmien ratkaisuiden etsimiseen:**
+**Projektin tekemisessä käytettyt referenssit ongelmien ratkaisuiden etsimiseen:**
 
   W3schools  
   StackOverFlow  
   Opettajien materiaalit  
 
-**API dokumentaatiota luodessa käytetty:**
+**API dokumentaatiota luodessa käytettyt referenssit:**
 
 Microsoft copilot käytetty apuna apidoc kommentoimisessa. Muut kommenttit laadittu ilman  
 ApiDoc dokumentaatiota  
