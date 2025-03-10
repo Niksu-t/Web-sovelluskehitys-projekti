@@ -7,6 +7,21 @@ dialog::backdrop {
   opacity: 40%;
 }
 
+#logOut {
+    border-radius: 8px;
+    border: 2px solid transparent;
+    font-weight: 500;
+    width: 100px;
+    margin: auto;
+    height: 50px;
+    font-family: inherit;
+    background-color: whitesmoke;
+    color: black;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: border-color 0.25s;
+}
+
 body {
   font-family:Arial, Helvetica, sans-serif;
   background-color: white;

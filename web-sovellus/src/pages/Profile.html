@@ -31,6 +31,7 @@
             <a class="heading" href="Login.html"><h1>Login</h1></a>
           </li>
         </ul>
+        <button id = "logOut">Log out</button>
       </section>
       <section class="pageContent">
         <div>
@@ -77,6 +78,15 @@
       </dialog>
     </section>
     <script type="module" src="/src/js/updateUser.js"></script>
+    <script>
+      const logOut = () => {
+        localStorage.removeItem("token")
+      }
+
+      const logOutbutton = document.getElementById("logOut");
+      logOutbutton.addEventListener("click", logOut);
+
+    </script>
     <footer>Copyright, Niko Tiesmäki</footer>
   </body>
 </html>

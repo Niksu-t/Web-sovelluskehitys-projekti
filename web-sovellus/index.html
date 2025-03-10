@@ -28,6 +28,7 @@
           <a class="heading" href="/src/pages/Login.html"><h1>Login</h1></a>
         </li>
       </ul>
+      <button id = "logOut">Log out</button>
     </section>
     <section class="pageContent">
       <h2>Home</h2>
@@ -39,6 +40,15 @@
       <img id="jeff" src="src/imgs/jeff.png" />
     </section>
     </section>
+    <script>
+      const logOut = () => {
+        localStorage.removeItem("token")
+      }
+
+      const logOutbutton = document.getElementById("logOut");
+      logOutbutton.addEventListener("click", logOut);
+
+    </script>
     <footer>Copyright, Niko Tiesmäki</footer>
   </body>
 </html>
