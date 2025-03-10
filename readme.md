@@ -41,6 +41,32 @@ erDiagram
     }
     USERS ||--o{ DIARYENTRIES : "has"
 ```
+## Kuvas toiminnallisuuksista
+ 
+### Käyttäjät
+
+1. Lisääminen
+2. Poistaminen
+3. Kirjautuminen
+4. Omien tietojen hakeminen
+5. Käyttäjien hakeminen id:llä
+6. Kaikkien käyttäjien hakeminen
+
+### Päiväkirjamerkinnät
+
+1. Merkintöjen lisääminen
+2. Merkintöjen poistaminen
+3. Merkintöjen muokkaaminen
+4. Merkintöjen tarkasteleminen
+
+### Admin
+
+1. Muiden käyttäjien muokkaaminen
+2. Muiden merkintöjen muokkaaminen
+3. Muiden merkintöjen poistaminen
+4. Muiden käyttäjien poistaminen
+5. Muiden merkintöjen tarkasteleminen
+
 ## Bugit
 
 **Tiedossa olevat bugit tällä hetkellä on:**
