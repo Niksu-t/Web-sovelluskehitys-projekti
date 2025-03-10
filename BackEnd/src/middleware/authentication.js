@@ -36,7 +36,12 @@ const checkAuthEntries = async (req, res, next) => {
     next();
   }
 };
-
+/**
+ * 
+ * @param {object} req 
+ * @param {object} res 
+ * @param {function} next 
+ */
 // Authorization check for users
 const checkAuthUsers = async (req, res, next) => {
   // Setting variables for ease of use

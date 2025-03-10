@@ -8,14 +8,12 @@ const hostname = '127.0.0.1';
 const app = express();
 const port = 3000;
 
-// middleware, mitä tarvitaan, jotta Ullan fronttiharjoitukset toimivat (Vite)
-// lisää myös: import cors from 'cors'; tiedoston yläosaan
-// ja asenna paketti: npm install cors
+// middleware needed for vite functionality
 app.use(cors());
 
-// Staattinen html-sivusto tarjoillaan palvelimen juuressa
-app.use('/', express.static('public'));
-// middleware, joka lukee json data POST-pyyntöjen rungosta (body)
+// Static html page at root
+app.use('/', express.static('docs'));
+// middleware which reads json from request body
 app.use(express.json());
 
 
@@ -28,18 +26,18 @@ app.get('/api/', (req, res) => {
 });
 
 
-// Users resurssin päätepisteet (endpoints)
+// Users resource endpoints
 app.use('/api/users', userRouter);
-// käyttäjäautentikaatio (kirjautuminen)
+// User authentication
 app.use('/api/auth', authRouter);
-// Päiväkirjamerkinnät
+// Diary entries endpoints
 app.use('/api/entries', entryRouter);
 
 
 app.use(notFoundHandler);
 app.use(errorHandler);
 
-// palvelimen käynnistys lopuksi kaikkien määritysten jälkeen
+// server starts
 app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
