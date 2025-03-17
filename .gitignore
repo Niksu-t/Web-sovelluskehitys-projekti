@@ -2,6 +2,7 @@
 node_modules
 docs/
 .DS_Store
+.venv
 
 # Logs
 logs
