@@ -1,0 +1,20 @@
+{"level":30,"time":"2025-03-18T11:13:58.865Z","pid":11156,"hostname":"Fractalius_V5","msg":"Listening on 52132"}
+(node:11156) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-18T11:13:59.141Z","pid":11156,"hostname":"Fractalius_V5","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-18T11:13:59.637Z","pid":11156,"hostname":"Fractalius_V5","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-18T11:13:59.638Z","pid":11156,"hostname":"Fractalius_V5","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-18T11:13:59.638Z","pid":11156,"hostname":"Fractalius_V5","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-18T11:13:59.640Z","pid":11156,"hostname":"Fractalius_V5","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-18T11:13:59.641Z","pid":11156,"hostname":"Fractalius_V5","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-18T11:13:59.647Z","pid":11156,"hostname":"Fractalius_V5","msg":"Changed active context"}
+{"level":30,"time":"2025-03-18T11:13:59.792Z","pid":11156,"hostname":"Fractalius_V5","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-18T11:13:59.793Z","pid":11156,"hostname":"Fractalius_V5","msg":"Changed active page"}
+{"level":30,"time":"2025-03-18T11:13:59.823Z","pid":11156,"hostname":"Fractalius_V5","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-18T11:13:59.832Z","pid":11156,"hostname":"Fractalius_V5","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-18T11:13:59.832Z","pid":11156,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with [name=\"username\"] in page."}
+{"level":30,"time":"2025-03-18T11:14:01.056Z","pid":11156,"hostname":"Fractalius_V5","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-18T11:14:01.058Z","pid":11156,"hostname":"Fractalius_V5","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-18T11:14:01.058Z","pid":11156,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with [name=\"password\"] in page."}
+{"level":30,"time":"2025-03-18T11:14:02.051Z","pid":11156,"hostname":"Fractalius_V5","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-18T11:15:09.931Z","pid":11156,"hostname":"Fractalius_V5","msg":"Removed page=8bda2ab1-35a3-404f-a352-c9ba091ffb4a from context=e5a2950a-1e12-4b12-af0f-fb96d236f83c page stack"}

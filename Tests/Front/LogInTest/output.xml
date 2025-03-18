@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-18T13:18:36.016397" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\Users\nikoj\Documents\GitHub\Web-sovelluskehitys-projekti\Tests\front\LogInTest\login_test.robot">
+<test id="s1-t1" name="Test Web Form" line="6">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-03-18T13:18:36.119028" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\nikoj\\Documents\\GitHub\\Web-sovelluskehitys-projekti\\Tests\\front\\LogInTest\\browser\\traces\\temp\\e9e5dbc2-fa35-4b13-8747-106ace963eac"}</msg>
+<msg time="2025-03-18T13:18:36.133706" level="INFO">Starting Browser process c:\Users\nikoj\Documents\GitHub\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\index.js using port 52442</msg>
+<msg time="2025-03-18T13:18:36.133797" level="INFO">Node startup parameters: ['node', 'c:\\Users\\nikoj\\Documents\\GitHub\\Web-sovelluskehitys-projekti\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '52442']</msg>
+<msg time="2025-03-18T13:18:37.349668" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\nikoj\\Documents\\GitHub\\Web-sovelluskehitys-projekti\\Tests\\front\\LogInTest\\browser\\traces\\temp\\e9e5dbc2-fa35-4b13-8747-106ace963eac"}</msg>
+<arg>chromium</arg>
+<arg>headless=No</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-03-18T13:18:36.118567" elapsed="1.231325"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-03-18T13:18:37.534616" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173/src/pages/Login.html</msg>
+<msg time="2025-03-18T13:18:37.534692" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>http://localhost:5173/src/pages/Login.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-03-18T13:18:37.350277" elapsed="0.184563"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2025-03-18T13:18:37.541296" level="INFO">Title: 'Vite App'</msg>
+<arg>==</arg>
+<arg>Vite App</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-03-18T13:18:37.535114" elapsed="0.006275"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-03-18T13:18:37.542090" level="INFO">Types the text 'meloonitest' in the given field.</msg>
+<arg>[name="username"]</arg>
+<arg>${Username}</arg>
+<arg>delay=0.1 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-03-18T13:18:37.541593" elapsed="1.221532"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-03-18T13:18:38.763844" level="INFO">Types the text 'melooni20' in the given field.</msg>
+<arg>[name="password"]</arg>
+<arg>${Password}</arg>
+<arg>delay=0.1 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-03-18T13:18:38.763369" elapsed="0.994723"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-03-18T13:18:39.758721" level="INFO">Clicks the element 'input[name="submit"]'.</msg>
+<arg>input[name="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-18T13:18:39.758338" elapsed="0.016757"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-03-18T13:18:40.150929" level="INFO">Text: 'Login successful'</msg>
+<arg>css=dialog.info_dialog p</arg>
+<arg>==</arg>
+<arg>Login successful</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-18T13:18:39.775399" elapsed="0.375624"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-03-18T13:18:40.151664" level="INFO">Clicks the element 'css=dialog.info_dialog button[autofocus]'.</msg>
+<arg>css=dialog.info_dialog button[autofocus]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-18T13:18:40.151244" elapsed="0.012778"/>
+</kw>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2025-03-18T13:18:40.435932" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-18T13:18:40.164654" elapsed="0.271506"/>
+</kw>
+<status status="PASS" start="2025-03-18T13:18:36.118007" elapsed="4.318408"/>
+</test>
+<status status="PASS" start="2025-03-18T13:18:36.017275" elapsed="4.432986"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="1" fail="0" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
