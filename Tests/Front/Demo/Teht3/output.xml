@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-24T11:28:03.749323" rpa="false" schemaversion="5">
+<suite id="s1" name="Teht3 Demo" source="C:\Koulustuff\Coding\Web-sovelluskehitys-projekti\tests\Front\Demo\Teht3\teht3_demo.robot">
+<test id="s1-t1" name="Test Web Form" line="7">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-03-24T11:28:03.926508" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Koulustuff\\Coding\\Web-sovelluskehitys-projekti\\tests\\Front\\Demo\\Teht3\\browser\\traces\\temp\\61f13157-594b-47bc-9aba-ef317f81fe17"}</msg>
+<msg time="2025-03-24T11:28:03.950255" level="INFO">Starting Browser process C:\Koulustuff\Coding\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\index.js using port 53340</msg>
+<msg time="2025-03-24T11:28:03.950401" level="INFO">Node startup parameters: ['node', 'C:\\Koulustuff\\Coding\\Web-sovelluskehitys-projekti\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '53340']</msg>
+<msg time="2025-03-24T11:28:05.296263" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Koulustuff\\Coding\\Web-sovelluskehitys-projekti\\tests\\Front\\Demo\\Teht3\\browser\\traces\\temp\\61f13157-594b-47bc-9aba-ef317f81fe17"}</msg>
+<arg>chromium</arg>
+<arg>headless=No</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-03-24T11:28:03.925772" elapsed="1.370828"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-03-24T11:28:05.680667" level="INFO">Successfully initialized new page object and opened url: https://www.selenium.dev/selenium/web/web-form.html</msg>
+<msg time="2025-03-24T11:28:05.680786" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.selenium.dev/selenium/web/web-form.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-03-24T11:28:05.297220" elapsed="0.383770"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2025-03-24T11:28:05.692554" level="INFO">Title: 'Web form'</msg>
+<arg>==</arg>
+<arg>Web form</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-03-24T11:28:05.681327" elapsed="0.011364"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-03-24T11:28:05.693881" level="INFO">Types the text 'somebody@example.com' in the given field.</msg>
+<arg>[name="my-text"]</arg>
+<arg>${Username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-03-24T11:28:05.693005" elapsed="0.107406"/>
+</kw>
+<kw name="Type Secret" owner="Browser">
+<arg>[name="my-password"]</arg>
+<arg>$Password</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given secret from ``variable_name`` into the text field
+found by ``selector``.</doc>
+<status status="PASS" start="2025-03-24T11:28:05.800761" elapsed="0.035128"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-03-24T11:28:05.837509" level="INFO">Types the text 'Testmessage' in the given field.</msg>
+<arg>[name="my-textarea"]</arg>
+<arg>${Message}</arg>
+<arg>delay=0.1s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-03-24T11:28:05.836396" elapsed="1.243800"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-03-24T11:28:07.081457" level="INFO">Selects the option(s) 1 by attribute SelectAttribute.value from element select[name="my-select"].</msg>
+<arg>select[name="my-select"]</arg>
+<arg>value</arg>
+<arg>1</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-24T11:28:07.080605" elapsed="0.026002"/>
+</kw>
+<kw name="Upload File By Selector" owner="Browser">
+<arg>input[type="file"]</arg>
+<arg>Keywords.robot</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Uploads file from ``path`` to file input element matched by selector.</doc>
+<status status="PASS" start="2025-03-24T11:28:07.106979" elapsed="0.012581"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-03-24T11:28:07.120401" level="INFO">Clicks the element 'input[name="my-check"]'.</msg>
+<msg time="2025-03-24T11:28:07.237967" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-24T11:28:07.238124" level="INFO">See also file:///C:/Koulustuff/Coding/Web-sovelluskehitys-projekti/tests/Front/Demo/Teht3/playwright-log-1742808483885931000.txt for additional details.</msg>
+<msg time="2025-03-24T11:28:07.238509" level="FAIL">Error: locator.click: Error: strict mode violation: locator('input[name="my-check"]') resolved to 2 elements:
+    1) &lt;input checked type="checkbox" name="my-check" id="my-check-1" class="form-check-input"/&gt; aka getByRole('checkbox', { name: 'Checked checkbox' })
+    2) &lt;input type="checkbox" name="my-check" id="my-check-2" class="form-check-input"/&gt; aka getByRole('checkbox', { name: 'Default checkbox' })
+
+Call log:
+  - waiting for locator('input[name="my-check"]')
+</msg>
+<arg>input[name="my-check"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="FAIL" start="2025-03-24T11:28:07.119863" elapsed="0.122713">Error: locator.click: Error: strict mode violation: locator('input[name="my-check"]') resolved to 2 elements:
+    1) &lt;input checked type="checkbox" name="my-check" id="my-check-1" class="form-check-input"/&gt; aka getByRole('checkbox', { name: 'Checked checkbox' })
+    2) &lt;input type="checkbox" name="my-check" id="my-check-2" class="form-check-input"/&gt; aka getByRole('checkbox', { name: 'Default checkbox' })
+
+Call log:
+  - waiting for locator('input[name="my-check"]')
+</status>
+</kw>
+<msg time="2025-03-24T11:28:07.246268" level="INFO">Set timeout to: 10000</msg>
+<msg time="2025-03-24T11:28:07.255139" level="INFO">Switching context to context=70a08599-9257-4b1d-ac0a-c96505e81a31 in CURRENT</msg>
+<msg time="2025-03-24T11:28:07.261434" level="INFO">Successfully changed active context: context=70a08599-9257-4b1d-ac0a-c96505e81a31</msg>
+<msg time="2025-03-24T11:28:07.300998" level="INFO">Successfully closed Context</msg>
+<status status="FAIL" start="2025-03-24T11:28:03.924832" elapsed="3.318286">Error: locator.click: Error: strict mode violation: locator('input[name="my-check"]') resolved to 2 elements:
+    1) &lt;input checked type="checkbox" name="my-check" id="my-check-1" class="form-check-input"/&gt; aka getByRole('checkbox', { name: 'Checked checkbox' })
+    2) &lt;input type="checkbox" name="my-check" id="my-check-2" class="form-check-input"/&gt; aka getByRole('checkbox', { name: 'Default checkbox' })
+
+Call log:
+  - waiting for locator('input[name="my-check"]')
+</status>
+</test>
+<status status="FAIL" start="2025-03-24T11:28:03.750770" elapsed="3.552107"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Teht3 Demo" id="s1" pass="0" fail="1" skip="0">Teht3 Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

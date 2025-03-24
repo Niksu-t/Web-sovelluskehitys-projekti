@@ -1,0 +1,45 @@
+{"level":30,"time":"2025-03-24T09:17:46.923Z","pid":7636,"hostname":"Mattowsiima","msg":"Listening on 52881"}
+(node:7636) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-24T09:17:47.434Z","pid":7636,"hostname":"Mattowsiima","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-24T09:17:47.644Z","pid":7636,"hostname":"Mattowsiima","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-24T09:17:47.645Z","pid":7636,"hostname":"Mattowsiima","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-24T09:17:47.645Z","pid":7636,"hostname":"Mattowsiima","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-24T09:17:47.653Z","pid":7636,"hostname":"Mattowsiima","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-24T09:17:47.654Z","pid":7636,"hostname":"Mattowsiima","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-24T09:17:47.674Z","pid":7636,"hostname":"Mattowsiima","msg":"Changed active context"}
+{"level":30,"time":"2025-03-24T09:17:47.822Z","pid":7636,"hostname":"Mattowsiima","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-24T09:17:47.823Z","pid":7636,"hostname":"Mattowsiima","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T09:17:48.047Z","pid":7636,"hostname":"Mattowsiima","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-24T09:17:48.064Z","pid":7636,"hostname":"Mattowsiima","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T09:17:48.065Z","pid":7636,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with [name=\"my-text\"] in page."}
+{"level":30,"time":"2025-03-24T09:17:48.175Z","pid":7636,"hostname":"Mattowsiima","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T09:17:48.179Z","pid":7636,"hostname":"Mattowsiima","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T09:17:48.179Z","pid":7636,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with [name=\"my-password\"] in page."}
+{"level":30,"time":"2025-03-24T09:17:48.202Z","pid":7636,"hostname":"Mattowsiima","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T09:17:48.206Z","pid":7636,"hostname":"Mattowsiima","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T09:17:48.206Z","pid":7636,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with [name=\"my-textarea\"] in page."}
+{"level":30,"time":"2025-03-24T09:17:48.242Z","pid":7636,"hostname":"Mattowsiima","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T09:17:48.246Z","pid":7636,"hostname":"Mattowsiima","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-03-24T09:17:48.246Z","pid":7636,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with select[name=\"my-select\"] in page."}
+{"level":30,"time":"2025-03-24T09:17:48.266Z","pid":7636,"hostname":"Mattowsiima","msg":"Option entries: 4"}
+{"level":30,"time":"2025-03-24T09:17:48.266Z","pid":7636,"hostname":"Mattowsiima","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-03-24T09:17:48.266Z","pid":7636,"hostname":"Mattowsiima","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-03-24T09:17:48.274Z","pid":7636,"hostname":"Mattowsiima","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:17:48.276Z","pid":7636,"hostname":"Mattowsiima","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:17:48.278Z","pid":7636,"hostname":"Mattowsiima","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:17:48.279Z","pid":7636,"hostname":"Mattowsiima","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:17:48.281Z","pid":7636,"hostname":"Mattowsiima","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:17:48.282Z","pid":7636,"hostname":"Mattowsiima","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:17:48.283Z","pid":7636,"hostname":"Mattowsiima","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:17:48.284Z","pid":7636,"hostname":"Mattowsiima","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:17:48.286Z","pid":7636,"hostname":"Mattowsiima","msg":"Changed active context"}
+{"level":30,"time":"2025-03-24T09:17:48.286Z","pid":7636,"hostname":"Mattowsiima","msg":"Changing current active page: page=43f79975-8fb4-48d1-ab22-5e553f585299"}
+{"level":30,"time":"2025-03-24T09:17:48.286Z","pid":7636,"hostname":"Mattowsiima","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T09:17:48.289Z","pid":7636,"hostname":"Mattowsiima","msg":"Start of node method closeContext"}
+{"level":30,"time":"2025-03-24T09:17:48.305Z","pid":7636,"hostname":"Mattowsiima","msg":"Removed page=20d4e144-324e-490e-a75e-4ec7bcf2fcd4 from context=10f07909-798a-43d3-8f9f-81db93da483d page stack"}
+{"level":30,"time":"2025-03-24T09:17:48.329Z","pid":7636,"hostname":"Mattowsiima","msg":"End of node method closeContext"}
+{"level":30,"time":"2025-03-24T09:17:48.336Z","pid":7636,"hostname":"Mattowsiima","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:17:48.337Z","pid":7636,"hostname":"Mattowsiima","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:17:48.390Z","pid":7636,"hostname":"Mattowsiima","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-03-24T09:17:48.572Z","pid":7636,"hostname":"Mattowsiima","msg":"End of node method closeAllBrowsers"}

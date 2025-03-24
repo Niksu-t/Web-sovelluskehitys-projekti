@@ -1,0 +1,61 @@
+{"level":30,"time":"2025-03-24T09:25:25.004Z","pid":8916,"hostname":"Mattowsiima","msg":"Listening on 53218"}
+(node:8916) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-24T09:25:25.506Z","pid":8916,"hostname":"Mattowsiima","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-24T09:25:25.708Z","pid":8916,"hostname":"Mattowsiima","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-24T09:25:25.708Z","pid":8916,"hostname":"Mattowsiima","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-24T09:25:25.708Z","pid":8916,"hostname":"Mattowsiima","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-24T09:25:25.716Z","pid":8916,"hostname":"Mattowsiima","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-24T09:25:25.717Z","pid":8916,"hostname":"Mattowsiima","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-24T09:25:25.733Z","pid":8916,"hostname":"Mattowsiima","msg":"Changed active context"}
+{"level":30,"time":"2025-03-24T09:25:25.871Z","pid":8916,"hostname":"Mattowsiima","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-24T09:25:25.871Z","pid":8916,"hostname":"Mattowsiima","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T09:25:26.187Z","pid":8916,"hostname":"Mattowsiima","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-24T09:25:26.202Z","pid":8916,"hostname":"Mattowsiima","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T09:25:26.203Z","pid":8916,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with [name=\"my-text\"] in page."}
+{"level":30,"time":"2025-03-24T09:25:26.296Z","pid":8916,"hostname":"Mattowsiima","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T09:25:26.300Z","pid":8916,"hostname":"Mattowsiima","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T09:25:26.300Z","pid":8916,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with [name=\"my-password\"] in page."}
+{"level":30,"time":"2025-03-24T09:25:26.324Z","pid":8916,"hostname":"Mattowsiima","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T09:25:26.328Z","pid":8916,"hostname":"Mattowsiima","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T09:25:26.328Z","pid":8916,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with [name=\"my-textarea\"] in page."}
+{"level":30,"time":"2025-03-24T09:25:27.555Z","pid":8916,"hostname":"Mattowsiima","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T09:25:27.559Z","pid":8916,"hostname":"Mattowsiima","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-03-24T09:25:27.559Z","pid":8916,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with select[name=\"my-select\"] in page."}
+{"level":30,"time":"2025-03-24T09:25:27.582Z","pid":8916,"hostname":"Mattowsiima","msg":"Option entries: 4"}
+{"level":30,"time":"2025-03-24T09:25:27.582Z","pid":8916,"hostname":"Mattowsiima","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-03-24T09:25:27.582Z","pid":8916,"hostname":"Mattowsiima","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-03-24T09:25:27.587Z","pid":8916,"hostname":"Mattowsiima","msg":"Reading multiplepart uploadFileBySelector"}
+{"level":30,"time":"2025-03-24T09:25:27.606Z","pid":8916,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with input[@type=\"file\"] in page."}
+{"level":30,"time":"2025-03-24T09:25:27.607Z","pid":8916,"hostname":"Mattowsiima","msg":"Uploading file(s) C:\\Koulustuff\\Coding\\Web-sovelluskehitys-projekti\\Tests\\Front\\Demo\\Teht3\\Keywords.robot to input[@type=\"file\"]"}
+================= Original suppressed error =================
+locator.setInputFiles: Unsupported token "@type" while parsing css selector "input[@type="file"]". Did you mean to CSS.escape it?
+Call log:
+[2m  - waiting for input[@type="file"][22m
+
+    at async uploadFileBySelector (C:\Koulustuff\Coding\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\index.js:11947:5)
+    at async ServerDuplexStreamImpl.<anonymous> (C:\Koulustuff\Coding\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\index.js:13465:24) {
+  name: 'Error'
+}
+=============================================================
+{"level":30,"time":"2025-03-24T09:25:27.631Z","pid":8916,"hostname":"Mattowsiima","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-03-24T09:25:27.631Z","pid":8916,"hostname":"Mattowsiima","Take screenshot with options: ":{"path":"C:\\Koulustuff\\Coding\\Web-sovelluskehitys-projekti\\tests\\Front\\Demo\\Teht3\\browser\\screenshot\\fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-03-24T09:25:27.716Z","pid":8916,"hostname":"Mattowsiima","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-03-24T09:25:27.727Z","pid":8916,"hostname":"Mattowsiima","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:25:27.728Z","pid":8916,"hostname":"Mattowsiima","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:25:27.730Z","pid":8916,"hostname":"Mattowsiima","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:25:27.731Z","pid":8916,"hostname":"Mattowsiima","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:25:27.732Z","pid":8916,"hostname":"Mattowsiima","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:25:27.733Z","pid":8916,"hostname":"Mattowsiima","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:25:27.735Z","pid":8916,"hostname":"Mattowsiima","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:25:27.736Z","pid":8916,"hostname":"Mattowsiima","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:25:27.738Z","pid":8916,"hostname":"Mattowsiima","msg":"Changed active context"}
+{"level":30,"time":"2025-03-24T09:25:27.738Z","pid":8916,"hostname":"Mattowsiima","msg":"Changing current active page: page=036653de-47df-4b43-b3af-5ace0bfdc5ce"}
+{"level":30,"time":"2025-03-24T09:25:27.738Z","pid":8916,"hostname":"Mattowsiima","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T09:25:27.740Z","pid":8916,"hostname":"Mattowsiima","msg":"Start of node method closeContext"}
+{"level":30,"time":"2025-03-24T09:25:27.760Z","pid":8916,"hostname":"Mattowsiima","msg":"Removed page=5d73896a-c201-45c9-94f8-c951b3c5ca32 from context=8a92a2a7-bcb9-49c2-aecc-1d03c3c61626 page stack"}
+{"level":30,"time":"2025-03-24T09:25:27.780Z","pid":8916,"hostname":"Mattowsiima","msg":"End of node method closeContext"}
+{"level":30,"time":"2025-03-24T09:25:27.790Z","pid":8916,"hostname":"Mattowsiima","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:25:27.790Z","pid":8916,"hostname":"Mattowsiima","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:25:27.850Z","pid":8916,"hostname":"Mattowsiima","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-03-24T09:25:28.035Z","pid":8916,"hostname":"Mattowsiima","msg":"End of node method closeAllBrowsers"}

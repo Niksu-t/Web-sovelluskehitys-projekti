@@ -1,0 +1,69 @@
+{"level":30,"time":"2025-03-24T09:22:41.896Z","pid":8864,"hostname":"Mattowsiima","msg":"Listening on 53099"}
+(node:8864) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-24T09:22:42.416Z","pid":8864,"hostname":"Mattowsiima","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-24T09:22:42.618Z","pid":8864,"hostname":"Mattowsiima","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-24T09:22:42.618Z","pid":8864,"hostname":"Mattowsiima","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-24T09:22:42.618Z","pid":8864,"hostname":"Mattowsiima","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-24T09:22:42.626Z","pid":8864,"hostname":"Mattowsiima","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-24T09:22:42.627Z","pid":8864,"hostname":"Mattowsiima","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-24T09:22:42.645Z","pid":8864,"hostname":"Mattowsiima","msg":"Changed active context"}
+{"level":30,"time":"2025-03-24T09:22:42.774Z","pid":8864,"hostname":"Mattowsiima","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-24T09:22:42.774Z","pid":8864,"hostname":"Mattowsiima","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T09:22:43.041Z","pid":8864,"hostname":"Mattowsiima","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-24T09:22:43.055Z","pid":8864,"hostname":"Mattowsiima","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T09:22:43.056Z","pid":8864,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with [name=\"my-text\"] in page."}
+{"level":30,"time":"2025-03-24T09:22:43.147Z","pid":8864,"hostname":"Mattowsiima","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T09:22:43.151Z","pid":8864,"hostname":"Mattowsiima","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T09:22:43.151Z","pid":8864,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with [name=\"my-password\"] in page."}
+{"level":30,"time":"2025-03-24T09:22:43.173Z","pid":8864,"hostname":"Mattowsiima","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T09:22:43.177Z","pid":8864,"hostname":"Mattowsiima","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T09:22:43.177Z","pid":8864,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with [name=\"my-textarea\"] in page."}
+{"level":30,"time":"2025-03-24T09:22:44.398Z","pid":8864,"hostname":"Mattowsiima","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T09:22:44.402Z","pid":8864,"hostname":"Mattowsiima","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-03-24T09:22:44.403Z","pid":8864,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with select[name=\"my-select\"] in page."}
+{"level":30,"time":"2025-03-24T09:22:44.426Z","pid":8864,"hostname":"Mattowsiima","msg":"Option entries: 4"}
+{"level":30,"time":"2025-03-24T09:22:44.426Z","pid":8864,"hostname":"Mattowsiima","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-03-24T09:22:44.426Z","pid":8864,"hostname":"Mattowsiima","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-03-24T09:22:44.430Z","pid":8864,"hostname":"Mattowsiima","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-03-24T09:22:44.430Z","pid":8864,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with id=\"my-options\" in page."}
+{"level":30,"time":"2025-03-24T09:22:47.521Z","pid":8864,"hostname":"Mattowsiima","msg":"Removed page=714f7f5a-c646-4fa8-940b-9b3501596c96 from context=b2f40d9a-e175-415a-be08-637655f51e09 page stack"}
+{"level":30,"time":"2025-03-24T09:22:47.522Z","pid":8864,"hostname":"Mattowsiima","msg":"Error of node method  selectOption"}
+================= Original suppressed error =================
+locator.selectOption: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('id="my-options"')[22m
+
+    at selectOption (C:\Koulustuff\Coding\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\index.js:11814:32)
+    at async PlaywrightServer.selectOption (C:\Koulustuff\Coding\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:28)
+=============================================================
+{"level":30,"time":"2025-03-24T09:22:47.551Z","pid":8864,"hostname":"Mattowsiima","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\Koulustuff\Coding\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\index.js:10725:11)
+    at takeScreenshot (C:\Koulustuff\Coding\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\index.js:10769:3)
+    at PlaywrightServer.takeScreenshot (C:\Koulustuff\Coding\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:34)
+    at Object.onReceiveHalfClose (C:\Koulustuff\Coding\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Koulustuff\Coding\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Koulustuff\Coding\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\Koulustuff\Coding\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-03-24T09:22:47.552Z","pid":8864,"hostname":"Mattowsiima","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2025-03-24T09:22:47.592Z","pid":8864,"hostname":"Mattowsiima","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:22:47.601Z","pid":8864,"hostname":"Mattowsiima","msg":"Changed active context"}
+{"level":30,"time":"2025-03-24T09:22:47.592Z","pid":8864,"hostname":"Mattowsiima","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:22:47.594Z","pid":8864,"hostname":"Mattowsiima","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:22:47.595Z","pid":8864,"hostname":"Mattowsiima","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:22:47.597Z","pid":8864,"hostname":"Mattowsiima","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:22:47.597Z","pid":8864,"hostname":"Mattowsiima","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:22:47.599Z","pid":8864,"hostname":"Mattowsiima","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:22:47.599Z","pid":8864,"hostname":"Mattowsiima","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:22:47.602Z","pid":8864,"hostname":"Mattowsiima","msg":"Start of node method closeContext"}
+{"level":30,"time":"2025-03-24T09:22:47.626Z","pid":8864,"hostname":"Mattowsiima","msg":"End of node method closeContext"}
+{"level":30,"time":"2025-03-24T09:22:47.633Z","pid":8864,"hostname":"Mattowsiima","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:22:47.633Z","pid":8864,"hostname":"Mattowsiima","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-24T09:22:47.681Z","pid":8864,"hostname":"Mattowsiima","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-03-24T09:22:47.858Z","pid":8864,"hostname":"Mattowsiima","msg":"End of node method closeAllBrowsers"}

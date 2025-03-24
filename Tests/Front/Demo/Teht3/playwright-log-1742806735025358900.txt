@@ -1,0 +1,47 @@
+{"level":30,"time":"2025-03-24T08:58:55.750Z","pid":18156,"hostname":"Mattowsiima","msg":"Listening on 51893"}
+(node:18156) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-24T08:58:56.241Z","pid":18156,"hostname":"Mattowsiima","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-24T08:58:56.454Z","pid":18156,"hostname":"Mattowsiima","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-24T08:58:56.455Z","pid":18156,"hostname":"Mattowsiima","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-24T08:58:56.454Z","pid":18156,"hostname":"Mattowsiima","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-24T08:58:56.463Z","pid":18156,"hostname":"Mattowsiima","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-24T08:58:56.464Z","pid":18156,"hostname":"Mattowsiima","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-24T08:58:56.483Z","pid":18156,"hostname":"Mattowsiima","msg":"Changed active context"}
+{"level":30,"time":"2025-03-24T08:58:56.635Z","pid":18156,"hostname":"Mattowsiima","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-24T08:58:56.635Z","pid":18156,"hostname":"Mattowsiima","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T08:58:56.889Z","pid":18156,"hostname":"Mattowsiima","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-24T08:58:56.904Z","pid":18156,"hostname":"Mattowsiima","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T08:58:56.904Z","pid":18156,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with [name=\"my-text\"] in page."}
+{"level":30,"time":"2025-03-24T08:58:59.152Z","pid":18156,"hostname":"Mattowsiima","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T08:58:59.157Z","pid":18156,"hostname":"Mattowsiima","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T08:58:59.157Z","pid":18156,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with [name=\"my-password\"] in page."}
+{"level":30,"time":"2025-03-24T08:59:00.064Z","pid":18156,"hostname":"Mattowsiima","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T08:59:00.068Z","pid":18156,"hostname":"Mattowsiima","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T08:59:00.068Z","pid":18156,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with [name=\"my-textarea\"] in page."}
+{"level":30,"time":"2025-03-24T08:59:01.289Z","pid":18156,"hostname":"Mattowsiima","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T08:59:01.293Z","pid":18156,"hostname":"Mattowsiima","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-24T08:59:01.294Z","pid":18156,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with button in page."}
+{"level":30,"time":"2025-03-24T08:59:01.868Z","pid":18156,"hostname":"Mattowsiima","msg":"End of node method click"}
+{"level":30,"time":"2025-03-24T08:59:01.873Z","pid":18156,"hostname":"Mattowsiima","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-24T08:59:01.873Z","pid":18156,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with id=message in page."}
+{"level":30,"time":"2025-03-24T08:59:01.902Z","pid":18156,"hostname":"Mattowsiima","msg":"Retrieved text for element id=message containing Received!"}
+{"level":30,"time":"2025-03-24T08:59:01.902Z","pid":18156,"hostname":"Mattowsiima","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-24T08:59:01.906Z","pid":18156,"hostname":"Mattowsiima","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-24T08:59:01.906Z","pid":18156,"hostname":"Mattowsiima","msg":"Strict mode is enabled, find Locator with css=.class > #form-select in page."}
+{"level":30,"time":"2025-03-24T08:59:11.918Z","pid":18156,"hostname":"Mattowsiima","msg":"Error of node method  click"}
+================= Original suppressed error =================
+locator.click: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('.class > #form-select')[22m
+
+    at internalClick (C:\Koulustuff\Coding\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\index.js:11890:19)
+    at async click (C:\Koulustuff\Coding\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\index.js:11871:18)
+    at async PlaywrightServer.click (C:\Koulustuff\Coding\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2025-03-24T08:59:12.002Z","pid":18156,"hostname":"Mattowsiima","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-03-24T08:59:12.002Z","pid":18156,"hostname":"Mattowsiima","Take screenshot with options: ":{"path":"C:\\Koulustuff\\Coding\\Web-sovelluskehitys-projekti\\tests\\Front\\Demo\\Teht3\\browser\\screenshot\\fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-03-24T08:59:12.104Z","pid":18156,"hostname":"Mattowsiima","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-03-24T08:59:22.651Z","pid":18156,"hostname":"Mattowsiima","msg":"Removed page=3f639643-8846-43c8-ad95-a891bd0dd97e from context=cdd218f6-ee1c-4537-94d2-5f4a7c606cba page stack"}

@@ -1,0 +1,14 @@
+{"level":30,"time":"2025-03-24T08:43:01.042Z","pid":13860,"hostname":"Mattowsiima","msg":"Listening on 51474"}
+(node:13860) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-24T08:43:01.328Z","pid":13860,"hostname":"Mattowsiima","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-24T08:43:02.099Z","pid":13860,"hostname":"Mattowsiima","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-24T08:43:02.103Z","pid":13860,"hostname":"Mattowsiima","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-24T08:43:02.102Z","pid":13860,"hostname":"Mattowsiima","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-24T08:43:02.114Z","pid":13860,"hostname":"Mattowsiima","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-24T08:43:02.115Z","pid":13860,"hostname":"Mattowsiima","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-24T08:43:02.138Z","pid":13860,"hostname":"Mattowsiima","msg":"Changed active context"}
+{"level":30,"time":"2025-03-24T08:43:02.303Z","pid":13860,"hostname":"Mattowsiima","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-24T08:43:02.304Z","pid":13860,"hostname":"Mattowsiima","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T08:43:02.511Z","pid":13860,"hostname":"Mattowsiima","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-24T08:43:04.876Z","pid":13860,"hostname":"Mattowsiima","msg":"Removed page=125abbda-3474-43fa-84f0-6c1bf9b4e0bc from context=80b356c4-8da5-4b3a-aa7a-e1d7559cf851 page stack"}
