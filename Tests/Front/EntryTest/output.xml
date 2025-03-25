@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-25T14:05:44.427439" rpa="false" schemaversion="5">
+<suite id="s1" name="Entry test" source="C:\Users\nikoj\Documents\GitHub\Web-sovelluskehitys-projekti\Tests\Front\EntryTest\Entry_test.robot">
+<test id="s1-t1" name="Login First" line="6">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-03-25T14:05:44.528165" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\nikoj\\Documents\\GitHub\\Web-sovelluskehitys-projekti\\Tests\\Front\\EntryTest\\browser\\traces\\temp\\3286b0e5-afb6-4bcc-8fec-1e5e09ff5357"}</msg>
+<msg time="2025-03-25T14:05:44.543600" level="INFO">Starting Browser process c:\Users\nikoj\Documents\GitHub\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\index.js using port 56273</msg>
+<msg time="2025-03-25T14:05:44.543696" level="INFO">Node startup parameters: ['node', 'c:\\Users\\nikoj\\Documents\\GitHub\\Web-sovelluskehitys-projekti\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '56273']</msg>
+<msg time="2025-03-25T14:05:45.722605" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\nikoj\\Documents\\GitHub\\Web-sovelluskehitys-projekti\\Tests\\Front\\EntryTest\\browser\\traces\\temp\\3286b0e5-afb6-4bcc-8fec-1e5e09ff5357"}</msg>
+<arg>chromium</arg>
+<arg>headless=No</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-03-25T14:05:44.527654" elapsed="1.195175"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-03-25T14:05:45.906560" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173/src/pages/Login.html</msg>
+<msg time="2025-03-25T14:05:45.906633" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>http://localhost:5173/src/pages/Login.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-03-25T14:05:45.723250" elapsed="0.183711"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2025-03-25T14:05:45.912251" level="INFO">Title: 'Vite App'</msg>
+<arg>==</arg>
+<arg>Vite App</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-03-25T14:05:45.907269" elapsed="0.005068"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-03-25T14:05:45.912984" level="INFO">Types the text 'meloonitest' in the given field.</msg>
+<arg>[name="username"]</arg>
+<arg>${Username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T14:05:45.912547" elapsed="0.043335"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-03-25T14:05:45.956646" level="INFO">Types the text 'melooni20' in the given field.</msg>
+<arg>[name="password"]</arg>
+<arg>${Password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T14:05:45.956190" elapsed="0.020434"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-03-25T14:05:45.977286" level="INFO">Clicks the element 'input[name="submit"]'.</msg>
+<arg>input[name="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T14:05:45.976879" elapsed="0.097962"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-03-25T14:05:46.449739" level="INFO">Text: 'Login successful'</msg>
+<arg>css=dialog.info_dialog p</arg>
+<arg>==</arg>
+<arg>Login successful</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T14:05:46.075094" elapsed="0.374738"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-03-25T14:05:46.450447" level="INFO">Clicks the element 'css=dialog.info_dialog button[autofocus]'.</msg>
+<arg>css=dialog.info_dialog button[autofocus]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T14:05:46.450052" elapsed="0.014458"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-03-25T14:05:46.525836" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173/src/pages/Entries.html</msg>
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-03-25T14:05:46.464815" elapsed="0.061195"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-03-25T14:05:46.526869" level="INFO">Types the text '25-03-2025' in the given field.</msg>
+<arg>id=Date</arg>
+<arg>25-03-2025</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T14:05:46.526450" elapsed="0.025081"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-03-25T14:05:46.552234" level="INFO">Types the text 'Frustrated' in the given field.</msg>
+<arg>id=mood</arg>
+<arg>${mood}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T14:05:46.551778" elapsed="0.030484"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-03-25T14:05:46.582981" level="INFO">Types the text '80' in the given field.</msg>
+<arg>id=weigth</arg>
+<arg>${weight}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T14:05:46.582520" elapsed="0.014309"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-03-25T14:05:46.597529" level="INFO">Types the text '10' in the given field.</msg>
+<arg>id=sleephours</arg>
+<arg>${sleep}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T14:05:46.597085" elapsed="0.011402"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-03-25T14:05:46.609432" level="INFO">Types the text 'Am losing my mind because of Browser documentation' in the given field.</msg>
+<arg>id=notes</arg>
+<arg>${notes}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T14:05:46.608725" elapsed="0.092652"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-03-25T14:05:46.702174" level="INFO">Clicks the element 'css=form.entryform input[type="submit"]'.</msg>
+<arg>css=form.entryform input[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T14:05:46.701706" elapsed="0.013981"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-25T14:05:51.716405" level="INFO">Slept 5 seconds.</msg>
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-25T14:05:46.715922" elapsed="5.000587"/>
+</kw>
+<msg time="2025-03-25T14:05:51.719394" level="INFO">Set timeout to: 10000</msg>
+<msg time="2025-03-25T14:05:51.728042" level="INFO">Switching context to context=4ab60513-9136-4eac-aed3-6b3afe9b9596 in CURRENT</msg>
+<msg time="2025-03-25T14:05:51.739328" level="INFO">Successfully changed active context: context=4ab60513-9136-4eac-aed3-6b3afe9b9596</msg>
+<msg time="2025-03-25T14:05:51.773474" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2025-03-25T14:05:44.527041" elapsed="7.189740"/>
+</test>
+<status status="PASS" start="2025-03-25T14:05:44.428275" elapsed="7.346040"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Entry test" id="s1" pass="1" fail="0" skip="0">Entry test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

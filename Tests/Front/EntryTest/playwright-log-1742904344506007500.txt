@@ -1,0 +1,159 @@
+{"level":30,"time":"2025-03-25T12:05:44.908Z","pid":24172,"hostname":"Fractalius_V5","msg":"Listening on 56273"}
+(node:24172) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-25T12:05:45.203Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-25T12:05:45.721Z","pid":24172,"hostname":"Fractalius_V5","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-25T12:05:45.721Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-25T12:05:45.721Z","pid":24172,"hostname":"Fractalius_V5","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-25T12:05:45.724Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-25T12:05:45.725Z","pid":24172,"hostname":"Fractalius_V5","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-25T12:05:45.732Z","pid":24172,"hostname":"Fractalius_V5","msg":"Changed active context"}
+{"level":30,"time":"2025-03-25T12:05:45.819Z","pid":24172,"hostname":"Fractalius_V5","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-25T12:05:45.819Z","pid":24172,"hostname":"Fractalius_V5","msg":"Changed active page"}
+{"level":30,"time":"2025-03-25T12:05:45.905Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-25T12:05:45.913Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-25T12:05:45.914Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with [name=\"username\"] in page."}
+{"level":30,"time":"2025-03-25T12:05:45.955Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-25T12:05:45.957Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-25T12:05:45.957Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with [name=\"password\"] in page."}
+{"level":30,"time":"2025-03-25T12:05:45.975Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-25T12:05:45.978Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-25T12:05:45.978Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with input[name=\"submit\"] in page."}
+{"level":30,"time":"2025-03-25T12:05:46.074Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method click"}
+{"level":30,"time":"2025-03-25T12:05:46.076Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.076Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.088Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.088Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.101Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.101Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.108Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.108Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.120Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.120Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.125Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.125Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.137Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.137Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.144Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.144Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.156Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.156Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.161Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.161Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.173Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.173Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.178Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.178Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.190Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.190Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.196Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.196Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.207Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.207Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.212Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.212Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.223Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.224Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.228Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.228Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.240Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.240Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.245Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.245Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.256Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.256Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.261Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.261Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.272Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.272Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.277Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.277Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.289Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.289Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.294Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.294Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.305Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.306Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.310Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.310Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.321Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.321Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.326Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.326Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.337Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.337Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.341Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.341Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.352Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.352Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.356Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.356Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.367Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.367Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.371Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.371Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.382Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.382Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.386Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.386Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.397Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.397Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.402Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.402Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.413Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.413Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.417Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.417Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.428Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.428Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.432Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing "}
+{"level":30,"time":"2025-03-25T12:05:46.432Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.444Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.444Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog p in page."}
+{"level":30,"time":"2025-03-25T12:05:46.449Z","pid":24172,"hostname":"Fractalius_V5","msg":"Retrieved text for element css=dialog.info_dialog p containing Login successful"}
+{"level":30,"time":"2025-03-25T12:05:46.449Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T12:05:46.450Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-25T12:05:46.451Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=dialog.info_dialog button[autofocus] in page."}
+{"level":30,"time":"2025-03-25T12:05:46.462Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method click"}
+{"level":30,"time":"2025-03-25T12:05:46.465Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-25T12:05:46.465Z","pid":24172,"hostname":"Fractalius_V5","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-25T12:05:46.490Z","pid":24172,"hostname":"Fractalius_V5","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-25T12:05:46.490Z","pid":24172,"hostname":"Fractalius_V5","msg":"Changed active page"}
+{"level":30,"time":"2025-03-25T12:05:46.525Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-25T12:05:46.527Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-25T12:05:46.527Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with id=Date in page."}
+{"level":30,"time":"2025-03-25T12:05:46.550Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-25T12:05:46.552Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-25T12:05:46.552Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with id=mood in page."}
+{"level":30,"time":"2025-03-25T12:05:46.581Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-25T12:05:46.583Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-25T12:05:46.583Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with id=weigth in page."}
+{"level":30,"time":"2025-03-25T12:05:46.596Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-25T12:05:46.598Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-25T12:05:46.598Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with id=sleephours in page."}
+{"level":30,"time":"2025-03-25T12:05:46.607Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-25T12:05:46.610Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-25T12:05:46.610Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with id=notes in page."}
+{"level":30,"time":"2025-03-25T12:05:46.700Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-25T12:05:46.702Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-25T12:05:46.702Z","pid":24172,"hostname":"Fractalius_V5","msg":"Strict mode is enabled, find Locator with css=form.entryform input[type=\"submit\"] in page."}
+{"level":30,"time":"2025-03-25T12:05:46.715Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method click"}
+{"level":30,"time":"2025-03-25T12:05:51.720Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-25T12:05:51.721Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-25T12:05:51.722Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-25T12:05:51.724Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-25T12:05:51.725Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-25T12:05:51.726Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-25T12:05:51.728Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-25T12:05:51.730Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-25T12:05:51.731Z","pid":24172,"hostname":"Fractalius_V5","msg":"Changed active context"}
+{"level":30,"time":"2025-03-25T12:05:51.731Z","pid":24172,"hostname":"Fractalius_V5","msg":"Changing current active page: page=e05ca9d7-b5f2-41ae-9706-d61d0d68db53"}
+{"level":30,"time":"2025-03-25T12:05:51.731Z","pid":24172,"hostname":"Fractalius_V5","msg":"Changed active page"}
+{"level":30,"time":"2025-03-25T12:05:51.740Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method closeContext"}
+{"level":30,"time":"2025-03-25T12:05:51.749Z","pid":24172,"hostname":"Fractalius_V5","msg":"Removed page=64415c18-22b2-43c1-a9f7-3a9fc7c9726a from context=4ab60513-9136-4eac-aed3-6b3afe9b9596 page stack"}
+{"level":30,"time":"2025-03-25T12:05:51.752Z","pid":24172,"hostname":"Fractalius_V5","msg":"Removed page=c34dabdf-aa32-4bca-bd6f-c07a037549fd from context=4ab60513-9136-4eac-aed3-6b3afe9b9596 page stack"}
+{"level":30,"time":"2025-03-25T12:05:51.772Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method closeContext"}
+{"level":30,"time":"2025-03-25T12:05:51.776Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-25T12:05:51.776Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-25T12:05:51.807Z","pid":24172,"hostname":"Fractalius_V5","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-03-25T12:05:52.060Z","pid":24172,"hostname":"Fractalius_V5","msg":"End of node method closeAllBrowsers"}
