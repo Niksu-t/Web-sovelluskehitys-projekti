@@ -14,4 +14,4 @@ Käytetty Microsoft copilottia Browser dokumentaation selittämiseksi ja paremmi
 
 ## Yksilötehtävä 4
 
-Suoritettu kokonaan. Robot frameworkin avulla löysin bugin backendistä. Olin laittanut väärän funktion hakiessani päiväkirjamerkintöjä. Copilottia käytetty avustamaan Click avainsanan selector osuuden ymmärtämiseen. Käytetty suurimmaksi osaksi yksilötehtävä 3 osaamista eli sen copilot osuudet myös teoreettisesti pätee tähän tehtävään.
+Suoritettu kokonaan. Robot frameworkin avulla löysin bugin backendistä. Olin laittanut väärän funktion hakiessani päiväkirjamerkintöjä. Copilottia käytetty avustamaan Click avainsanan selector osuuden ymmärtämiseen. Käytetty suurimmaksi osaksi yksilötehtävä 3 osaamista eli sen copilot osuudet myös teoreettisesti pätee tähän tehtävään. Löytyy tosiaan Front/EntryTest
