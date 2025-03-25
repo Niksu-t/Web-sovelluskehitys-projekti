@@ -1,75 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-24T11:28:03.749323" rpa="false" schemaversion="5">
-<suite id="s1" name="Teht3 Demo" source="C:\Koulustuff\Coding\Web-sovelluskehitys-projekti\tests\Front\Demo\Teht3\teht3_demo.robot">
-<test id="s1-t1" name="Test Web Form" line="7">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-25T13:32:51.909927" rpa="false" schemaversion="5">
+<suite id="s1" name="Teht3 Demo" source="C:\Users\nikoj\Documents\GitHub\Web-sovelluskehitys-projekti\Tests\Front\Demo\Teht3\teht3_demo.robot">
+<test id="s1-t1" name="Dropdown Menus" line="7">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-03-24T11:28:03.926508" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Koulustuff\\Coding\\Web-sovelluskehitys-projekti\\tests\\Front\\Demo\\Teht3\\browser\\traces\\temp\\61f13157-594b-47bc-9aba-ef317f81fe17"}</msg>
-<msg time="2025-03-24T11:28:03.950255" level="INFO">Starting Browser process C:\Koulustuff\Coding\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\index.js using port 53340</msg>
-<msg time="2025-03-24T11:28:03.950401" level="INFO">Node startup parameters: ['node', 'C:\\Koulustuff\\Coding\\Web-sovelluskehitys-projekti\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '53340']</msg>
-<msg time="2025-03-24T11:28:05.296263" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Koulustuff\\Coding\\Web-sovelluskehitys-projekti\\tests\\Front\\Demo\\Teht3\\browser\\traces\\temp\\61f13157-594b-47bc-9aba-ef317f81fe17"}</msg>
+<msg time="2025-03-25T13:32:52.006524" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\nikoj\\Documents\\GitHub\\Web-sovelluskehitys-projekti\\Tests\\Front\\Demo\\Teht3\\browser\\traces\\temp\\74c44a4d-07a2-4c84-9ea1-bc8c30c3ff26"}</msg>
+<msg time="2025-03-25T13:32:52.020535" level="INFO">Starting Browser process c:\Users\nikoj\Documents\GitHub\Web-sovelluskehitys-projekti\.venv\Lib\site-packages\Browser\wrapper\index.js using port 54778</msg>
+<msg time="2025-03-25T13:32:52.020607" level="INFO">Node startup parameters: ['node', 'c:\\Users\\nikoj\\Documents\\GitHub\\Web-sovelluskehitys-projekti\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '54778']</msg>
+<msg time="2025-03-25T13:32:53.130698" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\nikoj\\Documents\\GitHub\\Web-sovelluskehitys-projekti\\Tests\\Front\\Demo\\Teht3\\browser\\traces\\temp\\74c44a4d-07a2-4c84-9ea1-bc8c30c3ff26"}</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-03-24T11:28:03.925772" elapsed="1.370828"/>
+<status status="PASS" start="2025-03-25T13:32:52.006103" elapsed="1.124756"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-03-24T11:28:05.680667" level="INFO">Successfully initialized new page object and opened url: https://www.selenium.dev/selenium/web/web-form.html</msg>
-<msg time="2025-03-24T11:28:05.680786" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2025-03-25T13:32:53.597470" level="INFO">Successfully initialized new page object and opened url: https://www.selenium.dev/selenium/web/web-form.html</msg>
+<msg time="2025-03-25T13:32:53.597539" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>https://www.selenium.dev/selenium/web/web-form.html</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-03-24T11:28:05.297220" elapsed="0.383770"/>
+<status status="PASS" start="2025-03-25T13:32:53.131164" elapsed="0.466498"/>
 </kw>
 <kw name="Get Title" owner="Browser">
-<msg time="2025-03-24T11:28:05.692554" level="INFO">Title: 'Web form'</msg>
+<msg time="2025-03-25T13:32:53.602923" level="INFO">Title: 'Web form'</msg>
 <arg>==</arg>
 <arg>Web form</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-03-24T11:28:05.681327" elapsed="0.011364"/>
-</kw>
-<kw name="Type Text" owner="Browser">
-<msg time="2025-03-24T11:28:05.693881" level="INFO">Types the text 'somebody@example.com' in the given field.</msg>
-<arg>[name="my-text"]</arg>
-<arg>${Username}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-03-24T11:28:05.693005" elapsed="0.107406"/>
-</kw>
-<kw name="Type Secret" owner="Browser">
-<arg>[name="my-password"]</arg>
-<arg>$Password</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given secret from ``variable_name`` into the text field
-found by ``selector``.</doc>
-<status status="PASS" start="2025-03-24T11:28:05.800761" elapsed="0.035128"/>
-</kw>
-<kw name="Type Text" owner="Browser">
-<msg time="2025-03-24T11:28:05.837509" level="INFO">Types the text 'Testmessage' in the given field.</msg>
-<arg>[name="my-textarea"]</arg>
-<arg>${Message}</arg>
-<arg>delay=0.1s</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-03-24T11:28:05.836396" elapsed="1.243800"/>
+<status status="PASS" start="2025-03-25T13:32:53.597982" elapsed="0.005034"/>
 </kw>
 <kw name="Select Options By" owner="Browser">
-<msg time="2025-03-24T11:28:07.081457" level="INFO">Selects the option(s) 1 by attribute SelectAttribute.value from element select[name="my-select"].</msg>
+<msg time="2025-03-25T13:32:53.603613" level="INFO">Selects the option(s) 1 by attribute SelectAttribute.value from element select[name="my-select"].</msg>
 <arg>select[name="my-select"]</arg>
 <arg>value</arg>
 <arg>1</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Selects options from select element found by ``selector``.</doc>
-<status status="PASS" start="2025-03-24T11:28:07.080605" elapsed="0.026002"/>
+<status status="PASS" start="2025-03-25T13:32:53.603234" elapsed="0.026451"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-03-25T13:32:53.630469" level="INFO">Clicks the element 'css=.form-control[list="my-options"]'.</msg>
+<arg>css=.form-control[list="my-options"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T13:32:53.630011" elapsed="0.070664"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-03-25T13:32:53.701333" level="INFO">Types the text 'New York' in the given field.</msg>
+<arg>css=.form-control[list="my-options"]</arg>
+<arg>New York</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T13:32:53.700926" elapsed="0.040335"/>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>css=.form-control[list="my-options"]</arg>
+<arg>Enter</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T13:32:53.741650" elapsed="0.157244"/>
+</kw>
+<msg time="2025-03-25T13:32:53.901388" level="INFO">Set timeout to: 10000</msg>
+<msg time="2025-03-25T13:32:53.907622" level="INFO">Switching context to context=585e2109-4fdc-4a70-a037-aa25e18e8d8f in CURRENT</msg>
+<msg time="2025-03-25T13:32:53.912080" level="INFO">Successfully changed active context: context=585e2109-4fdc-4a70-a037-aa25e18e8d8f</msg>
+<msg time="2025-03-25T13:32:53.937669" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2025-03-25T13:32:52.005589" elapsed="1.893550"/>
+</test>
+<test id="s1-t2" name="File Upload" line="16">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-03-25T13:32:53.940872" level="INFO">Switching browser to browser=f7bfa360-ad92-425c-b220-10538bae3d2a</msg>
+<msg time="2025-03-25T13:32:53.942099" level="INFO">Successfully changed active browser: browser=f7bfa360-ad92-425c-b220-10538bae3d2a</msg>
+<msg time="2025-03-25T13:32:53.942169" level="INFO">Reusing existing browser with id: browser=f7bfa360-ad92-425c-b220-10538bae3d2a</msg>
+<arg>chromium</arg>
+<arg>headless=No</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-03-25T13:32:53.940414" elapsed="0.001795"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-03-25T13:32:54.250081" level="INFO">Successfully initialized new page object and opened url: https://www.selenium.dev/selenium/web/web-form.html</msg>
+<msg time="2025-03-25T13:32:54.250148" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.selenium.dev/selenium/web/web-form.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-03-25T13:32:53.942454" elapsed="0.307807"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2025-03-25T13:32:54.254073" level="INFO">Title: 'Web form'</msg>
+<arg>==</arg>
+<arg>Web form</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-03-25T13:32:54.250500" elapsed="0.003666"/>
 </kw>
 <kw name="Upload File By Selector" owner="Browser">
 <arg>input[type="file"]</arg>
@@ -77,53 +111,330 @@ found by ``selector``.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Uploads file from ``path`` to file input element matched by selector.</doc>
-<status status="PASS" start="2025-03-24T11:28:07.106979" elapsed="0.012581"/>
+<status status="PASS" start="2025-03-25T13:32:54.254481" elapsed="0.017859"/>
+</kw>
+<msg time="2025-03-25T13:32:54.273818" level="INFO">Set timeout to: 10000</msg>
+<msg time="2025-03-25T13:32:54.279442" level="INFO">Switching context to context=30a3077c-05b5-4e80-89d6-59338f75e9be in CURRENT</msg>
+<msg time="2025-03-25T13:32:54.283723" level="INFO">Successfully changed active context: context=30a3077c-05b5-4e80-89d6-59338f75e9be</msg>
+<msg time="2025-03-25T13:32:54.306412" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2025-03-25T13:32:53.938471" elapsed="0.334101"/>
+</test>
+<test id="s1-t3" name="Radio buttons and Checkbox" line="22">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-03-25T13:32:54.309466" level="INFO">Switching browser to browser=f7bfa360-ad92-425c-b220-10538bae3d2a</msg>
+<msg time="2025-03-25T13:32:54.310653" level="INFO">Successfully changed active browser: browser=f7bfa360-ad92-425c-b220-10538bae3d2a</msg>
+<msg time="2025-03-25T13:32:54.310720" level="INFO">Reusing existing browser with id: browser=f7bfa360-ad92-425c-b220-10538bae3d2a</msg>
+<arg>chromium</arg>
+<arg>headless=No</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-03-25T13:32:54.308994" elapsed="0.001765"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-03-25T13:32:54.573345" level="INFO">Successfully initialized new page object and opened url: https://www.selenium.dev/selenium/web/web-form.html</msg>
+<msg time="2025-03-25T13:32:54.573410" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.selenium.dev/selenium/web/web-form.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-03-25T13:32:54.311069" elapsed="0.262453"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2025-03-25T13:32:54.577834" level="INFO">Title: 'Web form'</msg>
+<arg>==</arg>
+<arg>Web form</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-03-25T13:32:54.573740" elapsed="0.004165"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-03-24T11:28:07.120401" level="INFO">Clicks the element 'input[name="my-check"]'.</msg>
-<msg time="2025-03-24T11:28:07.237967" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<msg time="2025-03-24T11:28:07.238124" level="INFO">See also file:///C:/Koulustuff/Coding/Web-sovelluskehitys-projekti/tests/Front/Demo/Teht3/playwright-log-1742808483885931000.txt for additional details.</msg>
-<msg time="2025-03-24T11:28:07.238509" level="FAIL">Error: locator.click: Error: strict mode violation: locator('input[name="my-check"]') resolved to 2 elements:
-    1) &lt;input checked type="checkbox" name="my-check" id="my-check-1" class="form-check-input"/&gt; aka getByRole('checkbox', { name: 'Checked checkbox' })
-    2) &lt;input type="checkbox" name="my-check" id="my-check-2" class="form-check-input"/&gt; aka getByRole('checkbox', { name: 'Default checkbox' })
-
-Call log:
-  - waiting for locator('input[name="my-check"]')
-</msg>
-<arg>input[name="my-check"]</arg>
+<msg time="2025-03-25T13:32:54.578454" level="INFO">Clicks the element 'id=my-check-2'.</msg>
+<arg>id=my-check-2</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="FAIL" start="2025-03-24T11:28:07.119863" elapsed="0.122713">Error: locator.click: Error: strict mode violation: locator('input[name="my-check"]') resolved to 2 elements:
-    1) &lt;input checked type="checkbox" name="my-check" id="my-check-1" class="form-check-input"/&gt; aka getByRole('checkbox', { name: 'Checked checkbox' })
-    2) &lt;input type="checkbox" name="my-check" id="my-check-2" class="form-check-input"/&gt; aka getByRole('checkbox', { name: 'Default checkbox' })
-
+<status status="PASS" start="2025-03-25T13:32:54.578089" elapsed="0.019801"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-03-25T13:32:54.598558" level="INFO">Clicks the element 'id=my-check-1'.</msg>
+<arg>id=my-check-1</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T13:32:54.598160" elapsed="0.009900"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-03-25T13:32:54.608698" level="INFO">Clicks the element 'id=my-radio-2'.</msg>
+<arg>id=my-radio-2</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T13:32:54.608274" elapsed="0.012815"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-03-25T13:32:54.621804" level="INFO">Clicks the element 'id=my-radio-1'.</msg>
+<arg>id=my-radio-1</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T13:32:54.621357" elapsed="0.011920"/>
+</kw>
+<msg time="2025-03-25T13:32:54.634701" level="INFO">Set timeout to: 10000</msg>
+<msg time="2025-03-25T13:32:54.639314" level="INFO">Switching context to context=2346de47-d90c-4a9f-b407-caed2940dda8 in CURRENT</msg>
+<msg time="2025-03-25T13:32:54.642204" level="INFO">Successfully changed active context: context=2346de47-d90c-4a9f-b407-caed2940dda8</msg>
+<msg time="2025-03-25T13:32:54.665507" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2025-03-25T13:32:54.307126" elapsed="0.326372"/>
+</test>
+<test id="s1-t4" name="Date Picker" line="31">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-03-25T13:32:54.668592" level="INFO">Switching browser to browser=f7bfa360-ad92-425c-b220-10538bae3d2a</msg>
+<msg time="2025-03-25T13:32:54.669632" level="INFO">Successfully changed active browser: browser=f7bfa360-ad92-425c-b220-10538bae3d2a</msg>
+<msg time="2025-03-25T13:32:54.669673" level="INFO">Reusing existing browser with id: browser=f7bfa360-ad92-425c-b220-10538bae3d2a</msg>
+<arg>chromium</arg>
+<arg>headless=No</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-03-25T13:32:54.668144" elapsed="0.001565"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-03-25T13:32:54.980671" level="INFO">Successfully initialized new page object and opened url: https://www.selenium.dev/selenium/web/web-form.html</msg>
+<msg time="2025-03-25T13:32:54.980735" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.selenium.dev/selenium/web/web-form.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-03-25T13:32:54.669960" elapsed="0.310897"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2025-03-25T13:32:54.984895" level="INFO">Title: 'Web form'</msg>
+<arg>==</arg>
+<arg>Web form</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-03-25T13:32:54.981098" elapsed="0.003862"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-03-25T13:32:54.985471" level="INFO">Clicks the element 'css=.form-control[name="my-date"]'.</msg>
+<arg>css=.form-control[name="my-date"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T13:32:54.985136" elapsed="0.027439"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-03-25T13:32:55.013364" level="INFO">Clicks the element 'xpath=//td[normalize-space(text())='25' and not(contains(@class, 'old'))]'.</msg>
+<arg>xpath=//td[normalize-space(text())='25' and not(contains(@class, 'old'))]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T13:32:55.012894" elapsed="0.020964"/>
+</kw>
+<msg time="2025-03-25T13:32:55.035363" level="INFO">Set timeout to: 10000</msg>
+<msg time="2025-03-25T13:32:55.040781" level="INFO">Switching context to context=2ac55d75-e336-40ed-8afc-526d1439a544 in CURRENT</msg>
+<msg time="2025-03-25T13:32:55.044753" level="INFO">Successfully changed active context: context=2ac55d75-e336-40ed-8afc-526d1439a544</msg>
+<msg time="2025-03-25T13:32:55.066922" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2025-03-25T13:32:54.666151" elapsed="0.367950"/>
+</test>
+<test id="s1-t5" name="Color Picker" line="38">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-03-25T13:32:55.069804" level="INFO">Switching browser to browser=f7bfa360-ad92-425c-b220-10538bae3d2a</msg>
+<msg time="2025-03-25T13:32:55.070706" level="INFO">Successfully changed active browser: browser=f7bfa360-ad92-425c-b220-10538bae3d2a</msg>
+<msg time="2025-03-25T13:32:55.070756" level="INFO">Reusing existing browser with id: browser=f7bfa360-ad92-425c-b220-10538bae3d2a</msg>
+<arg>chromium</arg>
+<arg>headless=No</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-03-25T13:32:55.069393" elapsed="0.001399"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-03-25T13:32:55.365956" level="INFO">Successfully initialized new page object and opened url: https://www.selenium.dev/selenium/web/web-form.html</msg>
+<msg time="2025-03-25T13:32:55.366020" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.selenium.dev/selenium/web/web-form.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-03-25T13:32:55.070985" elapsed="0.295152"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2025-03-25T13:32:55.369863" level="INFO">Title: 'Web form'</msg>
+<arg>==</arg>
+<arg>Web form</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-03-25T13:32:55.366379" elapsed="0.003551"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-03-25T13:32:55.370512" level="INFO">Clicks the element 'input[name="my-colors"]'.</msg>
+<arg>input[name="my-colors"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T13:32:55.370156" elapsed="0.038392"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-25T13:32:57.409362" level="INFO">Slept 2 seconds.</msg>
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-25T13:32:55.408908" elapsed="2.000614"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-03-25T13:32:57.410155" level="INFO">Fills the text '' in the given field.</msg>
+<msg time="2025-03-25T13:32:57.478597" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-25T13:32:57.478707" level="INFO">See also file:///C:/Users/nikoj/Documents/GitHub/Web-sovelluskehitys-projekti/Tests/Front/Demo/Teht3/playwright-log.txt for additional details.</msg>
+<msg time="2025-03-25T13:32:57.478934" level="FAIL">Error: locator.fill: Error: Malformed value
 Call log:
-  - waiting for locator('input[name="my-check"]')
+  - waiting for locator('input[name="my-colors"]')
+    - locator resolved to &lt;input type="color" value="#563d7c" name="my-colors" class="form-control form-control-color"/&gt;
+    - fill("")
+  - attempting fill action
+    - waiting for element to be visible, enabled and editable
+</msg>
+<arg>input[name="my-colors"]</arg>
+<arg>${color}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="FAIL" start="2025-03-25T13:32:57.409744" elapsed="0.071642">Error: locator.fill: Error: Malformed value
+Call log:
+  - waiting for locator('input[name="my-colors"]')
+    - locator resolved to &lt;input type="color" value="#563d7c" name="my-colors" class="form-control form-control-color"/&gt;
+    - fill("")
+  - attempting fill action
+    - waiting for element to be visible, enabled and editable
 </status>
 </kw>
-<msg time="2025-03-24T11:28:07.246268" level="INFO">Set timeout to: 10000</msg>
-<msg time="2025-03-24T11:28:07.255139" level="INFO">Switching context to context=70a08599-9257-4b1d-ac0a-c96505e81a31 in CURRENT</msg>
-<msg time="2025-03-24T11:28:07.261434" level="INFO">Successfully changed active context: context=70a08599-9257-4b1d-ac0a-c96505e81a31</msg>
-<msg time="2025-03-24T11:28:07.300998" level="INFO">Successfully closed Context</msg>
-<status status="FAIL" start="2025-03-24T11:28:03.924832" elapsed="3.318286">Error: locator.click: Error: strict mode violation: locator('input[name="my-check"]') resolved to 2 elements:
-    1) &lt;input checked type="checkbox" name="my-check" id="my-check-1" class="form-check-input"/&gt; aka getByRole('checkbox', { name: 'Checked checkbox' })
-    2) &lt;input type="checkbox" name="my-check" id="my-check-2" class="form-check-input"/&gt; aka getByRole('checkbox', { name: 'Default checkbox' })
-
+<kw name="Get Value">
+<var>${color_value}</var>
+<arg>input[name="my-colors"]</arg>
+<status status="NOT RUN" start="2025-03-25T13:32:57.481633" elapsed="0.000095"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${color_value}</arg>
+<arg>${color}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2025-03-25T13:32:57.481847" elapsed="0.000069"/>
+</kw>
+<msg time="2025-03-25T13:32:57.483235" level="INFO">Set timeout to: 10000</msg>
+<msg time="2025-03-25T13:32:57.487366" level="INFO">Switching context to context=e87ab246-4b3a-41d9-8157-778245aa6a58 in CURRENT</msg>
+<msg time="2025-03-25T13:32:57.490255" level="INFO">Successfully changed active context: context=e87ab246-4b3a-41d9-8157-778245aa6a58</msg>
+<msg time="2025-03-25T13:32:57.512584" level="INFO">Successfully closed Context</msg>
+<status status="FAIL" start="2025-03-25T13:32:55.067606" elapsed="2.414447">Error: locator.fill: Error: Malformed value
 Call log:
-  - waiting for locator('input[name="my-check"]')
+  - waiting for locator('input[name="my-colors"]')
+    - locator resolved to &lt;input type="color" value="#563d7c" name="my-colors" class="form-control form-control-color"/&gt;
+    - fill("")
+  - attempting fill action
+    - waiting for element to be visible, enabled and editable
 </status>
 </test>
-<status status="FAIL" start="2025-03-24T11:28:03.750770" elapsed="3.552107"/>
+<test id="s1-t6" name="Test Range Input" line="48">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-03-25T13:32:57.516869" level="INFO">Switching browser to browser=f7bfa360-ad92-425c-b220-10538bae3d2a</msg>
+<msg time="2025-03-25T13:32:57.518368" level="INFO">Successfully changed active browser: browser=f7bfa360-ad92-425c-b220-10538bae3d2a</msg>
+<msg time="2025-03-25T13:32:57.518444" level="INFO">Reusing existing browser with id: browser=f7bfa360-ad92-425c-b220-10538bae3d2a</msg>
+<arg>chromium</arg>
+<arg>headless=No</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-03-25T13:32:57.516396" elapsed="0.002088"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-03-25T13:32:57.790638" level="INFO">Successfully initialized new page object and opened url: https://www.selenium.dev/selenium/web/web-form.html</msg>
+<msg time="2025-03-25T13:32:57.790702" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.selenium.dev/selenium/web/web-form.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-03-25T13:32:57.518745" elapsed="0.272073"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2025-03-25T13:32:57.794912" level="INFO">Title: 'Web form'</msg>
+<arg>==</arg>
+<arg>Web form</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-03-25T13:32:57.791042" elapsed="0.003940"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-03-25T13:32:57.795530" level="INFO">Clicks the element 'input[name="my-range"]'.</msg>
+<arg>input[name="my-range"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-25T13:32:57.795167" elapsed="0.024006"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-03-25T13:32:57.819857" level="INFO">Types the text '7' in the given field.</msg>
+<msg time="2025-03-25T13:32:57.876924" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-25T13:32:57.877039" level="INFO">See also file:///C:/Users/nikoj/Documents/GitHub/Web-sovelluskehitys-projekti/Tests/Front/Demo/Teht3/playwright-log.txt for additional details.</msg>
+<msg time="2025-03-25T13:32:57.877134" level="FAIL">Error: locator.fill: Error: Malformed value
+Call log:
+  - waiting for locator('input[name="my-range"]')
+    - locator resolved to &lt;input min="0" max="10" step="1" value="5" type="range" name="my-range" class="form-range"/&gt;
+    - fill("")
+  - attempting fill action
+    - waiting for element to be visible, enabled and editable
+</msg>
+<arg>input[name="my-range"]</arg>
+<arg>7</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="FAIL" start="2025-03-25T13:32:57.819423" elapsed="0.058730">Error: locator.fill: Error: Malformed value
+Call log:
+  - waiting for locator('input[name="my-range"]')
+    - locator resolved to &lt;input min="0" max="10" step="1" value="5" type="range" name="my-range" class="form-range"/&gt;
+    - fill("")
+  - attempting fill action
+    - waiting for element to be visible, enabled and editable
+</status>
+</kw>
+<kw name="Get Value">
+<var>${range_value}</var>
+<arg>input[name="my-range"]</arg>
+<status status="NOT RUN" start="2025-03-25T13:32:57.878398" elapsed="0.000097"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${range_value}</arg>
+<arg>7</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2025-03-25T13:32:57.878639" elapsed="0.000082"/>
+</kw>
+<msg time="2025-03-25T13:32:57.880365" level="INFO">Set timeout to: 10000</msg>
+<msg time="2025-03-25T13:32:57.885581" level="INFO">Switching context to context=8ccd0d49-7996-480e-889d-ee8d7fdc8ea0 in CURRENT</msg>
+<msg time="2025-03-25T13:32:57.891816" level="INFO">Successfully changed active context: context=8ccd0d49-7996-480e-889d-ee8d7fdc8ea0</msg>
+<msg time="2025-03-25T13:32:57.915062" level="INFO">Successfully closed Context</msg>
+<status status="FAIL" start="2025-03-25T13:32:57.513424" elapsed="0.365449">Error: locator.fill: Error: Malformed value
+Call log:
+  - waiting for locator('input[name="my-range"]')
+    - locator resolved to &lt;input min="0" max="10" step="1" value="5" type="range" name="my-range" class="form-range"/&gt;
+    - fill("")
+  - attempting fill action
+    - waiting for element to be visible, enabled and editable
+</status>
+</test>
+<status status="FAIL" start="2025-03-25T13:32:51.910743" elapsed="6.005279"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="4" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Teht3 Demo" id="s1" pass="0" fail="1" skip="0">Teht3 Demo</stat>
+<stat name="Teht3 Demo" id="s1" pass="4" fail="2" skip="0">Teht3 Demo</stat>
 </suite>
 </statistics>
 <errors>
