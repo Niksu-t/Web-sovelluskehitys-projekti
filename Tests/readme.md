@@ -10,19 +10,19 @@ Suoritettu. Käytetty Microsoft copilottia formin submit elementin löytämiseen
 
 ## Yksilötehtävä 3
 
-Käytetty Microsoft copilottia Browser dokumentaation selittämiseksi ja paremmin ymmärtämikseksi. Käytetty myös vian määrittyksessä Tehävä löytyy Front/Demo/Teht3. En osannut laittaa browseria klikkaamaan datalist dropdownia. Laitoin sen kirjoittamaan vaihtoehdon en ole varma teinkö sen oikein. Copilottia myös käytetty esimerkkien antamiseksi. Datepicker saatiin toimimaan usealla yrityksellä. Sain sen toimimaan ottamalla timestampin klikattavaan päivään virhelogista, mutta kun tein simppelin date to timestamp python tiedoston tarkistaakseni. Se ei ollut luotettava tapa valita päivämäärää. Sen takia nykyinen asetelma. [Tehtävä3](/Tests/Front/Demo/Teht3/report.html)
+Käytetty Microsoft copilottia Browser dokumentaation selittämiseksi ja paremmin ymmärtämikseksi. Käytetty myös vian määrittyksessä Tehävä löytyy Front/Demo/Teht3. En osannut laittaa browseria klikkaamaan datalist dropdownia. Laitoin sen kirjoittamaan vaihtoehdon en ole varma teinkö sen oikein. Copilottia myös käytetty esimerkkien antamiseksi. Datepicker saatiin toimimaan usealla yrityksellä. Sain sen toimimaan ottamalla timestampin klikattavaan päivään virhelogista, mutta kun tein simppelin date to timestamp python tiedoston tarkistaakseni. Se ei ollut luotettava tapa valita päivämäärää. Sen takia nykyinen asetelma. [Tehtävä3](Front/Demo/Teht3/report.html)
 
 ## Yksilötehtävä 4
 
-Suoritettu kokonaan. Robot frameworkin avulla löysin bugin backendistä. Olin laittanut väärän funktion hakiessani päiväkirjamerkintöjä. Copilottia käytetty avustamaan Click avainsanan selector osuuden ymmärtämiseen. Käytetty suurimmaksi osaksi yksilötehtävä 3 osaamista eli sen copilot osuudet myös teoreettisesti pätee tähän tehtävään. Löytyy [tehtävä](/Tests/Front/EntryTest/report.html)
+Suoritettu kokonaan. Robot frameworkin avulla löysin bugin backendistä. Olin laittanut väärän funktion hakiessani päiväkirjamerkintöjä. Copilottia käytetty avustamaan Click avainsanan selector osuuden ymmärtämiseen. Käytetty suurimmaksi osaksi yksilötehtävä 3 osaamista eli sen copilot osuudet myös teoreettisesti pätee tähän tehtävään. Löytyy [tehtävä](Front/EntryTest/report.html)
 
 ## Yksilötehtävä 5
 
-Suoritettu kokonaan. Tällä kertaa ilman copilottia. Ei mitään ihmeellistä sanottavaa tehtävästä. Kaikki löytyy [täältä](/Tests/Front/LoginTest_dotenv/report.html)
+Suoritettu kokonaan. Tällä kertaa ilman copilottia. Ei mitään ihmeellistä sanottavaa tehtävästä. Kaikki löytyy [täältä](Front/LoginTest_dotenv/report.html)
 
 ## Yksilötehtävä 6
 
-Suoritettu täysin. Ei käytetty copilottia ollenkaan. Kaikki löytyy [täältä](/Tests/Front/LoginTest_crypto/report.html)
+Suoritettu täysin. Ei käytetty copilottia ollenkaan. Kaikki löytyy [täältä](Front/LoginTest_crypto/report.html)
 
 ## Yksilötehtävä 7
 
