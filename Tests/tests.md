@@ -23,3 +23,7 @@ Suoritettu kokonaan. Tällä kertaa ilman copilottia. Ei mitään ihmeellistä s
 ## Yksilötehtävä 6
 
 Suoritettu täysin. Ei käytetty copilottia ollenkaan. Kaikki löytyy [täältä](/Tests/Front/LoginTest_crypto/)
+
+## Yksilötehtävä 7
+
+Tunnilla sanottu, ettei tehtävää tarvitse tehdä kun tehtävät ovat eri kansioissa.
