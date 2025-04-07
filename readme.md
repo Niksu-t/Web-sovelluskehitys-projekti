@@ -1,6 +1,7 @@
 # Yksilöprojekti
 
 Tässä readme tiedostossa käydään läpi kurssin yksilöprojekti. Ensimmäisenä näkyy sovelluksen käyttöliittymästä otetut kuvankaappaukset.
+Linkki [Testeihin](./Tests/readme.md)
 
 ## Kuvankaappaukset
 
