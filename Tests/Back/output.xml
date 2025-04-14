@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-04-14T13:59:38.843484" rpa="false" schemaversion="5">
+<suite id="s1" name="Backend Test" source="C:\Users\nikoj\Documents\GitHub\Web-sovelluskehitys-projekti\Tests\Back\backend_test.robot">
+<kw name="Create Session" owner="RequestsLibrary" type="SETUP">
+<msg time="2025-04-14T13:59:39.113460" level="INFO">Creating Session using : alias=test, url=http://127.0.0.1:3000/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>test</arg>
+<arg>http://127.0.0.1:3000/</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-04-14T13:59:39.113355" elapsed="0.000218"/>
+</kw>
+<test id="s1-t1" name="Login" line="12">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-14T13:59:39.114065" level="INFO">${data} = {'title': 'request', 'username': 'meloonitest', 'password': 'melooni20'}</msg>
+<var>${data}</var>
+<arg>title=request</arg>
+<arg>username=meloonitest</arg>
+<arg>password=melooni20</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.113889" elapsed="0.000193"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-04-14T13:59:39.165984" level="INFO">POST Request : url=http://127.0.0.1:3000/api/auth/login 
+ path_url=/api/auth/login 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '72', 'Content-Type': 'application/json'} 
+ body=b'{"title": "request", "username": "meloonitest", "password": "melooni20"}' 
+ </msg>
+<msg time="2025-04-14T13:59:39.166063" level="INFO">POST Response : url=http://127.0.0.1:3000/api/auth/login 
+ status=200, reason=OK 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '658', 'ETag': 'W/"292-nWK6E3kyPfZmhezfK3xmvewCWqI"', 'Date': 'Mon, 14 Apr 2025 10:59:39 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body={"message":"login ok","user":{"user_id":26,"username":"meloonitest","password":"$2b$10$r93CCfOsR/N.wroed9u7TeN.u./miH7fhYQEuCut5HyIhrTUGUPsO","email":"meloonitest2@melooni.fi","created_at":"2025-03-07T10:30:50.000Z","user_level":"regular"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNiwidXNlcm5hbWUiOiJtZWxvb25pdGVzdCIsInBhc3N3b3JkIjoiJDJiJDEwJHI5M0NDZk9zUi9OLndyb2VkOXU3VGVOLnUuL21pSDdmaFlRRXVDdXQ1SHlJaHJUVUdVUHNPIiwiZW1haWwiOiJtZWxvb25pdGVzdDJAbWVsb29uaS5maSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAzLTA3VDEwOjMwOjUwLjAwMFoiLCJ1c2VyX2xldmVsIjoicmVndWxhciIsImlhdCI6MTc0NDYyODM3OSwiZXhwIjoxNzQ0NzE0Nzc5fQ.ubRjnPy_bxBl44J1KnzqRHDwQuNZRVsN7f_R0wmG104"} 
+ </msg>
+<msg time="2025-04-14T13:59:39.166149" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<arg>test</arg>
+<arg>/api/auth/login</arg>
+<arg>json=${data}</arg>
+<arg>expected_status=anything</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.114190" elapsed="0.051976"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-14T13:59:39.166683" level="INFO">{'message': 'login ok', 'user': {'user_id': 26, 'username': 'meloonitest', 'password': '$2b$10$r93CCfOsR/N.wroed9u7TeN.u./miH7fhYQEuCut5HyIhrTUGUPsO', 'email': 'meloonitest2@melooni.fi', 'created_at': '2025-03-07T10:30:50.000Z', 'user_level': 'regular'}, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNiwidXNlcm5hbWUiOiJtZWxvb25pdGVzdCIsInBhc3N3b3JkIjoiJDJiJDEwJHI5M0NDZk9zUi9OLndyb2VkOXU3VGVOLnUuL21pSDdmaFlRRXVDdXQ1SHlJaHJUVUdVUHNPIiwiZW1haWwiOiJtZWxvb25pdGVzdDJAbWVsb29uaS5maSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAzLTA3VDEwOjMwOjUwLjAwMFoiLCJ1c2VyX2xldmVsIjoicmVndWxhciIsImlhdCI6MTc0NDYyODM3OSwiZXhwIjoxNzQ0NzE0Nzc5fQ.ubRjnPy_bxBl44J1KnzqRHDwQuNZRVsN7f_R0wmG104'}</msg>
+<arg>${resp.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.166359" elapsed="0.000355"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-14T13:59:39.167078" level="INFO">${token} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNiwidXNlcm5hbWUiOiJtZWxvb25pdGVzdCIsInBhc3N3b3JkIjoiJDJiJDEwJHI5M0NDZk9zUi9OLndyb2VkOXU3VGVOLnUuL21pSDdmaFlRRXVDdXQ1SHlJaHJUVUdVUHNPIiwiZW1haWwiOiJ...</msg>
+<var>${token}</var>
+<arg>${resp.json()}[token]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.166832" elapsed="0.000261"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-14T13:59:39.167245" level="INFO">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNiwidXNlcm5hbWUiOiJtZWxvb25pdGVzdCIsInBhc3N3b3JkIjoiJDJiJDEwJHI5M0NDZk9zUi9OLndyb2VkOXU3VGVOLnUuL21pSDdmaFlRRXVDdXQ1SHlJaHJUVUdVUHNPIiwiZW1haWwiOiJtZWxvb25pdGVzdDJAbWVsb29uaS5maSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAzLTA3VDEwOjMwOjUwLjAwMFoiLCJ1c2VyX2xldmVsIjoicmVndWxhciIsImlhdCI6MTc0NDYyODM3OSwiZXhwIjoxNzQ0NzE0Nzc5fQ.ubRjnPy_bxBl44J1KnzqRHDwQuNZRVsN7f_R0wmG104</msg>
+<arg>${token}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.167184" elapsed="0.000081"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-04-14T13:59:39.167433" level="INFO">${token} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNiwidXNlcm5hbWUiOiJtZWxvb25pdGVzdCIsInBhc3N3b3JkIjoiJDJiJDEwJHI5M0NDZk9zUi9OLndyb2VkOXU3VGVOLnUuL21pSDdmaFlRRXVDdXQ1SHlJaHJUVUdVUHNPIiwiZW1haWwiOiJ...</msg>
+<arg>${token}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.167346" elapsed="0.000104"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${resp}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.167521" elapsed="0.000106"/>
+</kw>
+<status status="PASS" start="2025-04-14T13:59:39.113660" elapsed="0.054052"/>
+</test>
+<test id="s1-t2" name="Get Diary entries" line="22">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-14T13:59:39.168194" level="INFO">${headers} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNiwidXNlcm5hbWUiOiJtZWxvb25pdGVzdCIsInBhc3N3b3JkIjoiJDJiJDEwJHI5M0NDZk9zUi9OLndyb2VkOXU3VGVOLnUuL21pSDdmaFlRRXVDdXQ1SHlJa...</msg>
+<var>${headers}</var>
+<arg>Authorization=Bearer ${token}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.168073" elapsed="0.000137"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-04-14T13:59:39.172033" level="INFO">GET Request : url=http://127.0.0.1:3000/api/entries 
+ path_url=/api/entries 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNiwidXNlcm5hbWUiOiJtZWxvb25pdGVzdCIsInBhc3N3b3JkIjoiJDJiJDEwJHI5M0NDZk9zUi9OLndyb2VkOXU3VGVOLnUuL21pSDdmaFlRRXVDdXQ1SHlJaHJUVUdVUHNPIiwiZW1haWwiOiJtZWxvb25pdGVzdDJAbWVsb29uaS5maSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAzLTA3VDEwOjMwOjUwLjAwMFoiLCJ1c2VyX2xldmVsIjoicmVndWxhciIsImlhdCI6MTc0NDYyODM3OSwiZXhwIjoxNzQ0NzE0Nzc5fQ.ubRjnPy_bxBl44J1KnzqRHDwQuNZRVsN7f_R0wmG104'} 
+ body=None 
+ </msg>
+<msg time="2025-04-14T13:59:39.172075" level="INFO">GET Response : url=http://127.0.0.1:3000/api/entries 
+ status=200, reason=OK 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '1213', 'ETag': 'W/"4bd-W0vr89sUWIBDZf/OCp183T9aSlI"', 'Date': 'Mon, 14 Apr 2025 10:59:39 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body=[{"entry_id":20,"user_id":26,"entry_date":"2025-04-13T21:00:00.000Z","mood":"Happy","weight":"60.00","sleep_hours":8,"notes":"I like robot","created_at":"2025-03-25T12:05:46.000Z"},{"entry_id":21,"user_id":26,"entry_date":"2025-04-13T21:00:00.000Z","mood":"Happy","weight":"60.00","sleep_hours":8,"notes":"test","created_at":"2025-04-14T10:38:49.000Z"},{"entry_id":22,"user_id":26,"entry_date":"2025-04-13T21:00:00.000Z","mood":"Happy","weight":"60.00","sleep_hours":8,"notes":"test","created_at":"2025-04-14T10:42:11.000Z"},{"entry_id":23,"user_id":26,"entry_date":"2025-04-13T21:00:00.000Z","mood":"Happy","weight":"60.00","sleep_hours":8,"notes":"test","created_at":"2025-04-14T10:43:12.000Z"},{"entry_id":24,"user_id":26,"entry_date":"2025-04-13T21:00:00.000Z","mood":"Happy","weight":"60.00","sleep_hours":8,"notes":"test","created_at":"2025-04-14T10:46:00.000Z"},{"entry_id":25,"user_id":26,"entry_date":"2025-04-13T21:00:00.000Z","mood":"Happy","weight":"60.00","sleep_hours":8,"notes":"test","created_at":"2025-04-14T10:54:09.000Z"},{"entry_id":26,"user_id":26,"entry_date":"2025-04-13T21:00:00.000Z","mood":"Happy","weight":"60.00","sleep_hours":8,"notes":"test","created_at":"2025-04-14T10:54:35.000Z"}] 
+ </msg>
+<msg time="2025-04-14T13:59:39.172226" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<arg>test</arg>
+<arg>/api/entries</arg>
+<arg>headers=${headers}</arg>
+<arg>expected_status=anything</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.168311" elapsed="0.003927"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-14T13:59:39.172639" level="INFO">[{'entry_id': 20, 'user_id': 26, 'entry_date': '2025-04-13T21:00:00.000Z', 'mood': 'Happy', 'weight': '60.00', 'sleep_hours': 8, 'notes': 'I like robot', 'created_at': '2025-03-25T12:05:46.000Z'}, {'entry_id': 21, 'user_id': 26, 'entry_date': '2025-04-13T21:00:00.000Z', 'mood': 'Happy', 'weight': '60.00', 'sleep_hours': 8, 'notes': 'test', 'created_at': '2025-04-14T10:38:49.000Z'}, {'entry_id': 22, 'user_id': 26, 'entry_date': '2025-04-13T21:00:00.000Z', 'mood': 'Happy', 'weight': '60.00', 'sleep_hours': 8, 'notes': 'test', 'created_at': '2025-04-14T10:42:11.000Z'}, {'entry_id': 23, 'user_id': 26, 'entry_date': '2025-04-13T21:00:00.000Z', 'mood': 'Happy', 'weight': '60.00', 'sleep_hours': 8, 'notes': 'test', 'created_at': '2025-04-14T10:43:12.000Z'}, {'entry_id': 24, 'user_id': 26, 'entry_date': '2025-04-13T21:00:00.000Z', 'mood': 'Happy', 'weight': '60.00', 'sleep_hours': 8, 'notes': 'test', 'created_at': '2025-04-14T10:46:00.000Z'}, {'entry_id': 25, 'user_id': 26, 'entry_date': '2025-04-13T21:00:00.000Z', 'mood': 'Happy', 'weight': '60.00', 'sleep_hours': 8, 'notes': 'test', 'created_at': '2025-04-14T10:54:09.000Z'}, {'entry_id': 26, 'user_id': 26, 'entry_date': '2025-04-13T21:00:00.000Z', 'mood': 'Happy', 'weight': '60.00', 'sleep_hours': 8, 'notes': 'test', 'created_at': '2025-04-14T10:54:35.000Z'}]</msg>
+<arg>${resp.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.172419" elapsed="0.000246"/>
+</kw>
+<status status="PASS" start="2025-04-14T13:59:39.167900" elapsed="0.004869"/>
+</test>
+<test id="s1-t3" name="Add diary entry" line="28">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-14T13:59:39.173280" level="INFO">${headers} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNiwidXNlcm5hbWUiOiJtZWxvb25pdGVzdCIsInBhc3N3b3JkIjoiJDJiJDEwJHI5M0NDZk9zUi9OLndyb2VkOXU3VGVOLnUuL21pSDdmaFlRRXVDdXQ1SHlJa...</msg>
+<var>${headers}</var>
+<arg>Authorization=Bearer ${token}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.173169" elapsed="0.000125"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-14T13:59:39.173496" level="INFO">${data} = {'entry_date': '2025-04-14', 'mood': 'Happy', 'weight': '60', 'sleep_hours': '8', 'notes': 'test'}</msg>
+<var>${data}</var>
+<arg>entry_date=2025-04-14</arg>
+<arg>mood=Happy</arg>
+<arg>weight=60</arg>
+<arg>sleep_hours=8</arg>
+<arg>notes=test</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.173397" elapsed="0.000111"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-04-14T13:59:39.179440" level="INFO">POST Request : url=http://127.0.0.1:3000/api/entries 
+ path_url=/api/entries 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNiwidXNlcm5hbWUiOiJtZWxvb25pdGVzdCIsInBhc3N3b3JkIjoiJDJiJDEwJHI5M0NDZk9zUi9OLndyb2VkOXU3VGVOLnUuL21pSDdmaFlRRXVDdXQ1SHlJaHJUVUdVUHNPIiwiZW1haWwiOiJtZWxvb25pdGVzdDJAbWVsb29uaS5maSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAzLTA3VDEwOjMwOjUwLjAwMFoiLCJ1c2VyX2xldmVsIjoicmVndWxhciIsImlhdCI6MTc0NDYyODM3OSwiZXhwIjoxNzQ0NzE0Nzc5fQ.ubRjnPy_bxBl44J1KnzqRHDwQuNZRVsN7f_R0wmG104', 'Content-Length': '98', 'Content-Type': 'application/json'} 
+ body=b'{"entry_date": "2025-04-14", "mood": "Happy", "weight": "60", "sleep_hours": "8", "notes": "test"}' 
+ </msg>
+<msg time="2025-04-14T13:59:39.179485" level="INFO">POST Response : url=http://127.0.0.1:3000/api/entries 
+ status=201, reason=Created 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '26', 'ETag': 'W/"1a-XDNFNFrqeHHuclsYQ3uTbTzfT2A"', 'Date': 'Mon, 14 Apr 2025 10:59:39 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body={"message":"Entry added."} 
+ </msg>
+<msg time="2025-04-14T13:59:39.179552" level="INFO">${resp} = &lt;Response [201]&gt;</msg>
+<var>${resp}</var>
+<arg>test</arg>
+<arg>/api/entries</arg>
+<arg>headers=${headers}</arg>
+<arg>json=${data}</arg>
+<arg>expected_status=anything</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.173614" elapsed="0.005952"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-14T13:59:39.179954" level="INFO">{'message': 'Entry added.'}</msg>
+<arg>${resp.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.179705" elapsed="0.000273"/>
+</kw>
+<status status="PASS" start="2025-04-14T13:59:39.173010" elapsed="0.007060"/>
+</test>
+<test id="s1-t4" name="Update diary entry" line="34">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-14T13:59:39.180548" level="INFO">${entry_id} = 20</msg>
+<var>${entry_id}</var>
+<arg>20</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.180472" elapsed="0.000088"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-14T13:59:39.180783" level="INFO">${headers} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNiwidXNlcm5hbWUiOiJtZWxvb25pdGVzdCIsInBhc3N3b3JkIjoiJDJiJDEwJHI5M0NDZk9zUi9OLndyb2VkOXU3VGVOLnUuL21pSDdmaFlRRXVDdXQ1SHlJa...</msg>
+<var>${headers}</var>
+<arg>Authorization=Bearer ${token}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.180665" elapsed="0.000131"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-14T13:59:39.180967" level="INFO">${data} = {'entry_date': '2025-04-14', 'mood': 'Happy', 'weight': '60', 'sleep_hours': '8', 'notes': 'I like robot'}</msg>
+<var>${data}</var>
+<arg>entry_date=2025-04-14</arg>
+<arg>mood=Happy</arg>
+<arg>weight=60</arg>
+<arg>sleep_hours=8</arg>
+<arg>notes=I like robot</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.180882" elapsed="0.000102"/>
+</kw>
+<kw name="PUT On Session" owner="RequestsLibrary">
+<msg time="2025-04-14T13:59:39.184896" level="INFO">PUT Request : url=http://127.0.0.1:3000/api/entries/20 
+ path_url=/api/entries/20 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNiwidXNlcm5hbWUiOiJtZWxvb25pdGVzdCIsInBhc3N3b3JkIjoiJDJiJDEwJHI5M0NDZk9zUi9OLndyb2VkOXU3VGVOLnUuL21pSDdmaFlRRXVDdXQ1SHlJaHJUVUdVUHNPIiwiZW1haWwiOiJtZWxvb25pdGVzdDJAbWVsb29uaS5maSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAzLTA3VDEwOjMwOjUwLjAwMFoiLCJ1c2VyX2xldmVsIjoicmVndWxhciIsImlhdCI6MTc0NDYyODM3OSwiZXhwIjoxNzQ0NzE0Nzc5fQ.ubRjnPy_bxBl44J1KnzqRHDwQuNZRVsN7f_R0wmG104', 'Content-Length': '106', 'Content-Type': 'application/json'} 
+ body=b'{"entry_date": "2025-04-14", "mood": "Happy", "weight": "60", "sleep_hours": "8", "notes": "I like robot"}' 
+ </msg>
+<msg time="2025-04-14T13:59:39.184939" level="INFO">PUT Response : url=http://127.0.0.1:3000/api/entries/20 
+ status=200, reason=OK 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '30', 'ETag': 'W/"1e-faHdqTpzz9LeTI895QZmORD97Uc"', 'Date': 'Mon, 14 Apr 2025 10:59:39 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body={"message":"No Entry updated"} 
+ </msg>
+<msg time="2025-04-14T13:59:39.185094" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<arg>test</arg>
+<arg>/api/entries/${entry_id}</arg>
+<arg>headers=${headers}</arg>
+<arg>json=${data}</arg>
+<arg>expected_status=anything</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.181085" elapsed="0.004023"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-14T13:59:39.185542" level="INFO">{'message': 'No Entry updated'}</msg>
+<arg>${resp.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.185274" elapsed="0.000294"/>
+</kw>
+<status status="PASS" start="2025-04-14T13:59:39.180273" elapsed="0.005488"/>
+</test>
+<test id="s1-t5" name="Delete entry" line="41">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-14T13:59:39.186311" level="INFO">${entry_id} = 29</msg>
+<var>${entry_id}</var>
+<arg>29</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.186237" elapsed="0.000088"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-14T13:59:39.186528" level="INFO">${headers} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNiwidXNlcm5hbWUiOiJtZWxvb25pdGVzdCIsInBhc3N3b3JkIjoiJDJiJDEwJHI5M0NDZk9zUi9OLndyb2VkOXU3VGVOLnUuL21pSDdmaFlRRXVDdXQ1SHlJa...</msg>
+<var>${headers}</var>
+<arg>Authorization=Bearer ${token}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.186423" elapsed="0.000117"/>
+</kw>
+<kw name="DELETE On Session" owner="RequestsLibrary">
+<msg time="2025-04-14T13:59:39.191681" level="INFO">DELETE Request : url=http://127.0.0.1:3000/api/entries/29 
+ path_url=/api/entries/29 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNiwidXNlcm5hbWUiOiJtZWxvb25pdGVzdCIsInBhc3N3b3JkIjoiJDJiJDEwJHI5M0NDZk9zUi9OLndyb2VkOXU3VGVOLnUuL21pSDdmaFlRRXVDdXQ1SHlJaHJUVUdVUHNPIiwiZW1haWwiOiJtZWxvb25pdGVzdDJAbWVsb29uaS5maSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAzLTA3VDEwOjMwOjUwLjAwMFoiLCJ1c2VyX2xldmVsIjoicmVndWxhciIsImlhdCI6MTc0NDYyODM3OSwiZXhwIjoxNzQ0NzE0Nzc5fQ.ubRjnPy_bxBl44J1KnzqRHDwQuNZRVsN7f_R0wmG104', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-04-14T13:59:39.191723" level="INFO">DELETE Response : url=http://127.0.0.1:3000/api/entries/29 
+ status=204, reason=No Content 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'ETag': 'W/"1b-utC1hD7IF0V5mf1L7wIE8/nDPUA"', 'Date': 'Mon, 14 Apr 2025 10:59:39 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body=None 
+ </msg>
+<msg time="2025-04-14T13:59:39.191781" level="INFO">${resp} = &lt;Response [204]&gt;</msg>
+<var>${resp}</var>
+<arg>test</arg>
+<arg>/api/entries/${entry_id}</arg>
+<arg>headers=${headers}</arg>
+<arg>expected_status=anything</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.186614" elapsed="0.005180"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>204</arg>
+<arg>${resp}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-04-14T13:59:39.191925" elapsed="0.000134"/>
+</kw>
+<status status="PASS" start="2025-04-14T13:59:39.186052" elapsed="0.006136"/>
+</test>
+<status status="PASS" start="2025-04-14T13:59:38.844359" elapsed="0.348177"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Backend Test" id="s1" pass="5" fail="0" skip="0">Backend Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import {selectEntriesByUserId} from '../models/entry-model.js';
+import {selectEntriesByIds} from '../models/entry-model.js';
 import 'dotenv/config';
 
 // Authenticates token
@@ -25,10 +25,10 @@ const authenticateToken = (req, res, next) => {
 const checkAuthEntries = async (req, res, next) => {
   // Seacrh the database for entry and check if the user_id is the same as request makers.
   try {
-    const target = await selectEntriesByUserId(req.params.id);
-    console.log('Target: ', target);
+    const target = await selectEntriesByIds(req.params.id);
+    console.log('Target entry: ', target);
     const target_user = target.user_id;
-    console.log('Target: ', target_user);
+    console.log('Entrys owner id: ', target_user);
     console.log('Request maker: ', req.user.user_id);
     const admin_result = req.user.user_level;
     // Checks if the user is the one that created the entry or is an admin

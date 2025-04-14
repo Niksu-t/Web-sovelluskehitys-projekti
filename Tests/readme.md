@@ -31,3 +31,11 @@ Tunnilla sanottu, ettei tehtävää tarvitse tehdä kun tehtävät ovat eri kans
 ## Yksilötehtävä 8
 
 Uusi repositorio luotu github.io sivujen luomiseksi. Linkkit päivitetty siirtymään raportteihin
+
+## Yksilötehtävä 9 
+
+Tehtävä suoritetty. Testattu backendin ydinominaisuuksia. [Tästä](Back/report.html) linkistä löytyy raportti
+
+## Yksilötehtävä 10
+
+Tämä on suoritettu automaattisesti tekemällä kaikki yksilötehtävät. 
